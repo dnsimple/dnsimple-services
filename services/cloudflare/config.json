@@ -1,0 +1,47 @@
+{
+  "config": {
+    "name": "cloudflare",
+    "label": "CloudFlare",
+    "description": "Protect and accelerate your web site.",
+    "setup_description": "To complete CloudFlare set up, please either provide your existing CloudFlare credentials or enter your email address and a new password to create a new CloudFlare account. If you are creating a new CloudFlare account please [review the CloudFlare Terms of Service](https://www.cloudflare.com/terms.html) before continuing."
+  },
+  "fields": [
+    {
+      "name": "email",
+      "label": "Email",
+      "description": "Either your existing CloudFlare email address or the one you would like to use"
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "description": "Either your existing CloudFlare password or a new password if this is a new CloudFlare account"
+    },
+    {
+      "name": "target_address_or_host",
+      "label": "Target IP Address or Hostname",
+      "description": "Enter the IP address or fully-qualified hostname for your server where your website lives"
+    }
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "A",
+      "content": "{{target_address_or_host}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "www.aclsimple.com.cdn.cloudflare.net",
+      "ttl": 3600
+    }
+  ],
+  "hook": {
+    "url": "https://services.dnsimple.com/cloudflare",
+    "data": {
+      "email": "{{email}}",
+      "password": "{{password}}",
+      "target_address_or_host": "{{target_address_or_host}}"
+    }
+  }
+}

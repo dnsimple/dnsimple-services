@@ -1,0 +1,29 @@
+{
+  "config": {
+    "name": "heroku",
+    "label": "Heroku",
+    "description": "Use Heroku as your web host."
+  },
+  "fields": [
+    {
+      "name": "app",
+      "description": "Your subdomain in herokuapp.com",
+      "example": "yoursite.herokuapp.com"
+    }
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "{{app}}.herokuapp.com",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{app}}.herokuapp.com",
+      "ttl": 3600
+    }
+  ]
+}
+

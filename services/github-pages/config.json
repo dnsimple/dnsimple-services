@@ -6,13 +6,18 @@
   },
 
   "fields": [
+    {
+      "name": "github_domain",
+      "label": "Github Domain",
+      "description": "Enter your github.io domain"
+    }
   ],
 
   "records": [
     {
-      "type": "A",
+      "type": "ALIAS",
       "name": "",
-      "content": "204.232.175.78",
+      "content": "{{github_domain}}",
       "ttl": 3600
     },
     {
