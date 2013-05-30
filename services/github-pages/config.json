@@ -2,7 +2,7 @@
   "config": {
     "name": "github-pages",
     "label": "GitHub Pages",
-    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository.",
+    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository."
   },
 
   "fields": [
