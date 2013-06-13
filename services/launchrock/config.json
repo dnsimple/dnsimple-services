@@ -1,0 +1,29 @@
+{
+  "config": {
+    "name": "launchrock",
+    "label": "LaunchRock",
+    "description": "Set up a \"Launching Soon\" page in minutes. Collect interest, increase sharing and build your audience."
+  },
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "host.launchrock.com",
+      "ttl": 3600
+    },
+    {
+      "name": "*",
+      "type": "CNAME",
+      "content": "host.launchrock.com",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
+
+

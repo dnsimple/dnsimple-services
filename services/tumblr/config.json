@@ -1,0 +1,17 @@
+{
+  "config": {
+    "name": "tumblr",
+    "label": "Tumblr",
+    "description": "Use Tumblr for your blog."
+  },
+  "records": [ 
+    {
+      "name": "blog",
+      "type": "CNAME",
+      "content": "domains.tumblr.com",
+      "ttl": 3600
+    }
+  ]
+}
+
+

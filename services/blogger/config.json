@@ -1,0 +1,34 @@
+{
+  "config": {
+    "name": "blogger",
+    "label": "Blogger",
+    "description": "Use Blogger for your blog."
+  },
+  "records": [
+    {
+      "name": "blog",
+      "type": "A",
+      "content": "216.239.32.21",
+      "ttl": 3600
+    },
+    {
+      "name": "blog",
+      "type": "A",
+      "content": "216.239.34.21",
+      "ttl": 3600
+    },
+    {
+      "name": "blog",
+      "type": "A",
+      "content": "216.239.36.21",
+      "ttl": 3600
+    },
+    {
+      "name": "blog",
+      "type": "A",
+      "content": "216.239.38.21",
+      "ttl": 3600
+    },
+  ]
+}
+

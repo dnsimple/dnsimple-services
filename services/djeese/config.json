@@ -1,0 +1,21 @@
+{
+  "config": {
+    "name": "djeese",
+    "label": "Djeese",
+    "description": "The easiest way to build websites with django CMS."
+  },
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "hosted.djee.se",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}

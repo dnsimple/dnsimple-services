@@ -1,0 +1,27 @@
+{
+  "config": {
+    "name": "kickofflabs",
+    "label": "KickOffLabs",
+    "description": "Get customers with viral landing pages, newsletters, and useful customer insights you can build yourself."
+  },
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "proxy.kickofflabs.com",
+      "ttl": 3600
+    },
+    {
+      "name": "*",
+      "type": "CNAME",
+      "content": "proxy.kickofflabs.com",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
