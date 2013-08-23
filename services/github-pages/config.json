@@ -9,7 +9,8 @@
     {
       "name": "github_domain",
       "label": "Github Domain",
-      "description": "Enter your github.io domain"
+      "description": "Enter your github.io domain",
+      "example": "myapp.github.io"
     }
   ],
 
