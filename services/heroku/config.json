@@ -7,7 +7,7 @@
   "fields": [
     {
       "name": "app",
-      "label": "Heroku App Name"
+      "label": "Heroku App Name",
       "description": "Your app name is part of your Heroku URL, for example: in yourapp.herokuapp.com the app name is yourapp",
       "add-on": ".herokuapp.com",
       "example": "yoursite"
