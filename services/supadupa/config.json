@@ -1,0 +1,23 @@
+{
+  "config": {
+    "name": "supadupa",
+    "label": "SupaDupa",
+    "description": "An e-commerce platform to easily create a stunning online store."
+  }, 
+  "records": [
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "mysupadupa.com",
+      "ttl": 3600
+    }
+  ]
+}
+
+
