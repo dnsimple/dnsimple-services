@@ -24,7 +24,7 @@
     {
       "type": "CNAME",
       "name": "www",
-      "content": "{{domain}}",
+      "content": "{{github_domain}}",
       "ttl": 3600
     }
   ]
