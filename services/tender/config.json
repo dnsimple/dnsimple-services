@@ -1,0 +1,21 @@
+{
+  "config": {
+    "name": "tender",
+    "label": "Tender",
+    "description": "Use Tender for your customer support"
+  }, 
+  "records": [
+    {
+      "name": "support",
+      "type": "CNAME",
+      "content": "tenderapp.com",
+      "ttl": 3600
+    },
+    {
+      "name": "help",
+      "type": "URL",
+      "content": "http://support.{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
