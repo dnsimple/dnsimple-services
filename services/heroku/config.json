@@ -7,8 +7,8 @@
   "fields": [
     {
       "name": "app",
-      "description": "Your subdomain in herokuapp.com",
-      "example": "yoursite.herokuapp.com"
+      "description": "Your subdomain in herokuapp.com or herokussl.com",
+      "example": "yoursite"
     }
   ],
   "records": [
