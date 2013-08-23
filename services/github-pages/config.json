@@ -2,7 +2,8 @@
   "config": {
     "name": "github-pages",
     "label": "GitHub Pages",
-    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository."
+    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository.",
+    "setup_description": "Enter your Heroku app name to continue."
   },
 
   "fields": [
@@ -10,7 +11,7 @@
       "name": "github_domain",
       "label": "Github Domain",
       "description": "Enter your github.io domain",
-      "example": "myapp.github.io"
+      "example": "mysite.github.io"
     }
   ],
 
