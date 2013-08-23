@@ -3,15 +3,16 @@
     "name": "github-pages",
     "label": "GitHub Pages",
     "description": "Publish static pages for you and your projects by pushing files to a GitHub repository.",
-    "setup_description": "Enter your Heroku app name to continue."
+    "setup_description": "Enter your Github Pages user, organization or project name"
   },
 
   "fields": [
     {
-      "name": "github_domain",
-      "label": "Github Domain",
-      "description": "Enter your github.io domain",
-      "example": "mysite.github.io"
+      "name": "github_name",
+      "label": "Github Pages Name",
+      "description": "This will be a Github username, organization or project.",
+      "add-on": ".github.io",
+      "example": "mojombo"
     }
   ],
 
@@ -19,13 +20,13 @@
     {
       "type": "ALIAS",
       "name": "",
-      "content": "{{github_domain}}",
+      "content": "{{github_name}}",
       "ttl": 3600
     },
     {
       "type": "CNAME",
       "name": "www",
-      "content": "{{github_domain}}",
+      "content": "{{github_name}}",
       "ttl": 3600
     }
   ]
