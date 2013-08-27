@@ -32,15 +32,16 @@
     {
       "name": "www",
       "type": "CNAME",
-      "content": "www.aclsimple.com.cdn.cloudflare.net",
+      "content": "www.{{domain}}.cdn.cloudflare.net",
       "ttl": 3600
     }
   ],
   "hook": {
-    "url": "https://services.dnsimple.com/cloudflare",
+    "url": "https://cloudflare.services.dnsimple.com/",
     "data": {
       "email": "{{email}}",
       "password": "{{password}}",
+      "userid": "{{user_id}}",
       "target_address_or_host": "{{target_address_or_host}}"
     }
   }
