@@ -41,7 +41,6 @@
     "data": {
       "email": "{{email}}",
       "password": "{{password}}",
-      "userid": "{{user_id}}",
       "target_address_or_host": "{{target_address_or_host}}"
     }
   }
