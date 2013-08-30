@@ -24,9 +24,21 @@
   ],
   "records": [
     {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    },
+    {
       "name": "www",
       "type": "CNAME",
       "content": "www.{{domain}}.cdn.cloudflare.net",
+      "ttl": 3600
+    },
+    {
+      "name": "{{target_name}}",
+      "type": "{{target_type}}",
+      "content": "{{target_address_or_host}}",
       "ttl": 3600
     }
   ],
