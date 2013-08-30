@@ -70,6 +70,41 @@
       "content": "v=spf1 a include:_spf.google.com -all",
       "type": "SPF",
       "ttl": 3600
+    },
+    {
+      "name": "_jabber._tcp",
+      "content": "0 5269 xmpp-server.l.google.com",
+      "type": "SRV",
+      "ttl": 3600,
+      "prio": "5"
+    },
+    {
+      "name": "_jabber._tcp",
+      "content": "0 5269 xmpp-server1.l.google.com",
+      "type": "SRV",
+      "ttl": 3600,
+      "prio": "20"
+    },
+    {
+      "name": "_jabber._tcp",
+      "content": "0 5269 xmpp-server2.l.google.com",
+      "type": "SRV",
+      "ttl": 3600,
+      "prio": "20"
+    },
+    {
+      "name": "_jabber._tcp",
+      "content": "0 5269 xmpp-server3.l.google.com",
+      "type": "SRV",
+      "ttl": 3600,
+      "prio": "20"
+    },
+    {
+      "name": "_jabber._tcp",
+      "content": "0 5269 xmpp-server4.l.google.com",
+      "type": "SRV",
+      "ttl": 3600,
+      "prio": "20"
     }
   ]
 }
