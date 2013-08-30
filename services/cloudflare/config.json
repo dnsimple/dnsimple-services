@@ -31,11 +31,6 @@
     }
   ],
   "hook": {
-    "url": "https://cloudflare.services.dnsimple.com/",
-    "data": {
-      "email": "{{email}}",
-      "password": "{{password}}",
-      "target_address_or_host": "{{target_address_or_host}}"
-    }
+    "url": "https://cloudflare.services.dnsimple.com/"
   }
 }
