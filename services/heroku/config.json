@@ -2,15 +2,14 @@
   "config": {
     "name": "heroku",
     "label": "Heroku",
-    "description": "Use Heroku as your web host.",
-    "setup_description": "Enter your Heroku app name to continue."
+    "description": "Use Heroku as your web host."
   },
   "fields": [
     {
       "name": "app",
       "label": "Heroku App Name",
       "description": "Your app name is part of your Heroku URL, for example: in yourapp.herokuapp.com the app name is yourapp",
-      "add-on": ".herokuapp.com",
+      "append": ".herokuapp.com",
       "example": "yoursite"
     }
   ],

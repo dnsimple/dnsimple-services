@@ -2,8 +2,7 @@
   "config": {
     "name": "github-pages",
     "label": "GitHub Pages",
-    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository.",
-    "setup_description": "Enter your Github Pages user, organization or project name"
+    "description": "Publish static pages for you and your projects by pushing files to a GitHub repository."
   },
 
   "fields": [
@@ -11,7 +10,7 @@
       "name": "github_name",
       "label": "Github Pages Name",
       "description": "This will be a Github username, organization or project.",
-      "add-on": ".github.io",
+      "append": ".github.io",
       "example": "mojombo"
     }
   ],
