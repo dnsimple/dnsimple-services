@@ -88,4 +88,8 @@ Any values returned from the hook are merged with the customer-provided values b
 
 ## readme.md
 
-If there is a file called readme.md in a service directory
+All service definitions should include a readme.md file that explains what the service is for and whether there any specific details about the service that are important. The readme.md is a Markdown file.
+
+## instructions.md
+
+If a service requires additional set up you should include an instructions.md file. The file is a Markdown file and will be displayed on the service setup screen.
