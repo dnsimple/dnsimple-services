@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "wordpress",
+    "label": "WordPress",
+    "description": "Suare with the world, your community, or your closest friends."
+  },
+  "fields": [
+    {
+      "name": "subdomain",
+      "description": "Your Wordpress.com subdomain"
+    }
+  ],
+  "records": [ 
+    {
+      "name": "blog",
+      "type": "CNAME",
+      "content": "{{subdomain}}.wordpress.com",
+      "ttl": 3600
+    }
+  ]
+}
+
