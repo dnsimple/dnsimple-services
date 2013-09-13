@@ -1,4 +1,12 @@
-# Services
+# Welcome
+
+Welcome to the home of the [DNSimple](https://dnsimple.com) service templates. The one-click services in DNSimple are defined as JSON configurations and loaded into our system at deploy time. This means that you can contribute a new template by creating a pull request, simplifying the process of creating and updating templates. 
+
+# Contributing
+
+Read through the documentation below and look at the other templates in this repository before starting your own. If you have any questions feel free to get in touch with the DNSimple team using the support@dnsimple.com email address. Once you're ready to create your template, fork the project, add the template and issue a pull request.
+
+# Service Definitions
 
 Services are each stored in their own directory. A service definition must have a config.json file and a logo.png file at minimum. The logo.png must be 228 pixels wide by 78 pixels high.
 
