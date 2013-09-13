@@ -2,7 +2,7 @@
   "config": {
     "name": "wordpress",
     "label": "WordPress",
-    "description": "Suare with the world, your community, or your closest friends."
+    "description": "Share with the world, your community, or your closest friends."
   },
   "fields": [
     {
