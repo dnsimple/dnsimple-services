@@ -1,0 +1,1 @@
+[Windows Azure](https://www.windowsazure.com) is an open and flexible cloud platform that enables you to quickly build, deploy and manage applications across a global network of Microsoft-managed datacenters.

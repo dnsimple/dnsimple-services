@@ -1,0 +1,35 @@
+{
+  "config": {
+    "name": "windows-azure",
+    "label": "Windows Azure",
+    "description": "Build, deploy and manage applications across a global network of Microsoft-managed datacenters."
+  },
+  "fields": [
+    {
+      "name": "mysite",
+      "description": "Subdomain for your Azure site"
+    }
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "{{subdomain}}.azurewebsites.net",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{subdomain}}.azurewebsites.net",
+      "ttl": 3600
+    },
+    {
+      "name": "awverify",
+      "type": "CNAME",
+      "content": "awverify.{{subdomain}}.azurewebsites.net",
+      "ttl": 3600
+    }
+  ]
+}
+
+
