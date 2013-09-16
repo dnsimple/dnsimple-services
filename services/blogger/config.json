@@ -4,31 +4,22 @@
     "label": "Blogger",
     "description": "Use Blogger for your blog."
   },
+  "fields": [
+    {
+      "name": "blog",
+      "label": "Blogger Blog Name",
+      "description": "Your blog name is part of your Blogspot URL, for example: in myamazingblog123.blogspot.com the blog name is myamazingblog123.",
+      "append": ".blogspot.com",
+      "example": "myamazingblog123"
+    }
+  ],
   "records": [
     {
       "name": "blog",
-      "type": "A",
-      "content": "216.239.32.21",
+      "type": "CNAME",
+      "content": "{{blog}}.blogspot.com",
       "ttl": 3600
     },
-    {
-      "name": "blog",
-      "type": "A",
-      "content": "216.239.34.21",
-      "ttl": 3600
-    },
-    {
-      "name": "blog",
-      "type": "A",
-      "content": "216.239.36.21",
-      "ttl": 3600
-    },
-    {
-      "name": "blog",
-      "type": "A",
-      "content": "216.239.38.21",
-      "ttl": 3600
-    }
   ]
 }
 
