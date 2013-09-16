@@ -19,7 +19,7 @@
       "type": "CNAME",
       "content": "{{blog}}.blogspot.com",
       "ttl": 3600
-    },
+    }
   ]
 }
 
