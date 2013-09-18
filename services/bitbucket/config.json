@@ -4,9 +4,17 @@
     "label": "Bitbucket",
     "description": "Access your Bitbucket repositories from git.domain.tld"
   },
+  "fields": [
+    {
+      "name": "subdomain",
+      "label": "Subdomain",
+      "description": "The subdomain, i.e. `git` if you set the CNAME field in your Bitbucket account to `git.domain.tld`.",
+      "example": "git"
+    }
+  ],
   "records": [
     {
-      "name": "git",
+      "name": "{{subdomain}}",
       "type": "CNAME",
       "content": "bitbucket.org",
       "ttl": 3600
