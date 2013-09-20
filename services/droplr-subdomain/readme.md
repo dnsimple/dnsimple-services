@@ -1,0 +1,1 @@
+Serve your Droplr Pro links, media and files from your own subdomain, like `files.domain.tld/uCuW`.

@@ -1,0 +1,1 @@
+Serve your Droplr Pro links, media and files from your own domainname, like `my.net/uCuW`.
