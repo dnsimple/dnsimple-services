@@ -1,0 +1,46 @@
+{
+  "config": {
+    "name": "jimdo",
+    "label": "Jimdo",
+    "description": "Use your own domain for your Jimdo website. You need to have Jimdo Pro or Business to use your own domain."
+  },
+
+  "fields": [
+    {
+      "name": "jimdo_name",
+      "label": "Jimdo Site Name",
+      "description": "This will be your Jimdo website name.",
+      "append": ".jimdo.com",
+      "example": "bobsmade"
+    }
+  ],
+
+  "records": [
+    {
+      "type": "ALIAS",
+      "name": "",
+      "content": "{{jimdo_name}}.jimdo.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "content": "{{jimdo_name}}.jimdo.com",
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "MX",
+      "content": "mx1.jimdo.com",
+      "prio": 10,
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "MX",
+      "content": "mx2.jimdo.com",
+      "prio": 10,
+      "ttl": 3600
+    }
+  ]
+}
