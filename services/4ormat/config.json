@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "4ormat",
+    "label": "4ormat",
+    "description": "4ormat is an online portfolio platform that provides complete freedom for professionally showcasing your work to clients, employers, patrons, and the world at large."
+  },
+  "records": [
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "4ormat.com",
+      "ttl": 3600
+    }
+  ]
+}
+
