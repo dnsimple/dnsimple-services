@@ -19,21 +19,10 @@ module DnsimpleServices
       problems << "The service directory for #{name} does not exist" unless File.exists?(outdir)
       problems << "A service must have a logo.png file that is 228 x 78 pixels" unless valid_logo? 
       if File.exists?(config_path)
-        begin
-          config = Yajl::Parser.parse(File.read(config_path))
-          if config
-            verify_config_data(config['config'])
-            verify_records(config['records'])
-          else
-            problems << "A service config.json must define a JSON object"
-          end
-        rescue Yajl::ParseError => e
-          problems << "JSON #{e}"
-        end
+        verify_config
       else
         problems << "A service must have a valid config.json file"
       end
-
 
       recommendations << "A service should have a readme.md file" unless File.exists?("#{outdir}/readme.md")
 
@@ -43,6 +32,18 @@ module DnsimpleServices
     private
     def valid_logo?
       File.exists?(logo_path) && Dimensions.dimensions(logo_path) == LOGO_DIMENSIONS 
+    end
+
+    def verify_config
+      config = Yajl::Parser.parse(File.read(config_path))
+      if config
+        verify_config_data(config['config'])
+        verify_records(config['records'])
+      else
+        problems << "A service config.json must define a JSON object"
+      end
+    rescue Yajl::ParseError => e
+      problems << "JSON #{e}"
     end
 
     def verify_config_data(config_data)
