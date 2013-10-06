@@ -35,15 +35,15 @@ Services may have a readme.md file and/or an instructions.md file as well.
 
 ## config.json
 
+The JSON object defined in config.json holds all of the configuration details for the service. At minimum it must include the config section and the records collection with at least one record, however it may include the fields collection and a hook object as well.
+
+### Config
+
 The config section contains meta-data about the template. All of these attributes are required.
 
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.
 * description - An English description of the template, used for display.
-
-## Template
-
-The template object holds all of the configuration details for the template. At minimum it must include the records collection, however it may include the fields collection and a hook object as well.
 
 ### Fields
 
