@@ -1,4 +1,5 @@
 require_relative 'dnsimple_services/verifier'
+require_relative 'dnsimple_services/logger/stdout'
 
 module DnsimpleServices
   DEFAULT_LABEL = "Printable name for the service"
@@ -30,32 +31,32 @@ module DnsimpleServices
     end
   end
 
-  def self.verify(name)
+  def self.verify(name, logger=Logger::Stdout.new)
     raise VerifierError, "Name is required" unless name
 
     problems, recommendations = Verifier.new(name).verify
 
-    puts ""
+    logger << ""
     if problems.empty?
-      puts "Service definition for #{name} successfully verified."
+      logger << "Service definition for #{name} successfully verified."
     else
-      puts "#{problems.length} issues with #{name}:"
-      puts ""
+      logger << "#{problems.length} issues with #{name}:"
+      logger << ""
       problems.each do |description|
-        puts " * #{description}"
+        logger << " * #{description}"
       end
     end
 
     unless recommendations.empty?
-      puts ""
-      puts "#{recommendations.length} recommendations for #{name}:"
-      puts ""
+      logger << ""
+      logger << "#{recommendations.length} recommendations for #{name}:"
+      logger << ""
       recommendations.each do |description|
-        puts " * #{description}"
+        logger << " * #{description}"
       end
     end
 
-    puts ""
+    logger << ""
   end
 
   
