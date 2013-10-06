@@ -84,6 +84,12 @@ module DnsimpleServices
     def verify_records(records)
       if records
         problems << "A service records section must be a list of services with at least one service" unless records.is_a?(Array) && records.length >= 1
+
+        records.each_with_index do |record, index|
+          %w(name type ttl content).each do |attr|
+            problems << "Record #{index + 1} is missing the #{attr} attribute" unless record[attr]
+          end
+        end
       else
         problems << "A service config.json must have a 'records' section"
       end
