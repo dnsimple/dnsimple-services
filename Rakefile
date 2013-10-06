@@ -7,12 +7,20 @@ class DnsimpleServices
 
   LOGO_DIMENSIONS = [228, 78]
 
+  class GeneratorError < RuntimeError
+  end
+
+  class VerifierError < RuntimeError
+  end
+
   def self.generate(name, label)
-    raise "Name is required" unless name
+    raise GeneratorError, "Name is required" unless name
+
+    outdir = "services/#{name}"
+    raise GeneratorError, "Service already exists" if File.exists?(outdir)
 
     label ||= DEFAULT_LABEL
 
-    outdir = "services/#{name}"
     FileUtils.mkdir_p outdir
     FileUtils.cp Dir["example/*"], outdir
     config_path = "#{outdir}/config.json"
@@ -24,7 +32,7 @@ class DnsimpleServices
   end
 
   def self.verify(name)
-    raise "Name is required" unless name
+    raise VerifierError, "Name is required" unless name
 
     problems, recommendations = Verifier.new(name).verify
 
@@ -68,8 +76,6 @@ class DnsimpleServices
     end
 
     def verify
-      
-
       problems << "The service directory for #{name} does not exist" unless File.exists?(outdir)
       problems << "A service must have a logo.png file that is 228 x 78 pixels" unless valid_logo? 
       if File.exists?(config_path)
@@ -153,12 +159,20 @@ task :generate, :name do |t, args|
   name = args[:name]
   label = args[:label] 
 
-  DnsimpleServices.generate(name, label) 
+  begin
+    DnsimpleServices.generate(name, label)
+  rescue DnsimpleServices::GeneratorError => e
+    puts "Error: #{e}"
+  end
 end
 
 desc "Verify a service"
 task :verify, :name do |t, args|
   name = args[:name]
 
-  DnsimpleServices.verify(name)
+  begin
+    DnsimpleServices.verify(name)
+  rescue DnsimpleServices::VerifierError => e
+    puts "Error: #{e}"
+  end
 end
