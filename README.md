@@ -6,6 +6,27 @@ Welcome to the home of the [DNSimple](https://dnsimple.com) service templates. T
 
 Read through the documentation below and look at the other templates in this repository before starting your own. If you have any questions feel free to get in touch with the DNSimple team using the support@dnsimple.com email address. Once you're ready to create your template, fork the project, add the template and issue a pull request.
 
+# Tools
+
+If you have ruby installed then you can use the following steps to get a few rake tasks to make creating new service configurations easier:
+
+* `gem install bundler --no-ri --no-rdoc`
+* `bundle install`
+
+Once you've done that you have access to several tasks:
+
+To generate a new service definition:
+
+`rake generate[$name]` where $name is the short name of your service (for example: wordpress)
+
+For example: `rake verify[my-service]`
+
+To verify that a service definition meets our requirements for deployment:
+
+`rake verify[$name]` where $name is the short name of your service
+
+For example: `rake verify[blogger]`
+
 # Service Definitions
 
 Services are each stored in their own directory. A service definition must have a config.json file and a logo.png file at minimum. The logo.png must be 228 pixels wide by 78 pixels high.
@@ -14,7 +35,7 @@ Services may have a readme.md file and/or an instructions.md file as well.
 
 ## config.json
 
-The config section contains meta-data about the template.
+The config section contains meta-data about the template. All of these attributes are required.
 
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.

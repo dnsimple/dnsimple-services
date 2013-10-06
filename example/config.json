@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "%{name}",
+    "label": "%{label}",
+    "description": "This is a short description of the service"
+  },
+  "fields": [
+
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "example.com",
+      "ttl": 3600
+    }
+  ]
+}
+
