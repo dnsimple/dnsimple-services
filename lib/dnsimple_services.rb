@@ -1,0 +1,62 @@
+require_relative 'dnsimple_services/verifier'
+
+module DnsimpleServices
+  DEFAULT_LABEL = "Printable name for the service"
+  DEFAULT_DESCRIPTION = "This is a short description of the service"
+
+  LOGO_DIMENSIONS = [228, 78]
+
+  class GeneratorError < RuntimeError
+  end
+
+  class VerifierError < RuntimeError
+  end
+
+  def self.generate(name, label)
+    raise GeneratorError, "Name is required" unless name
+
+    outdir = "services/#{name}"
+    raise GeneratorError, "Service already exists" if File.exists?(outdir)
+
+    label ||= DEFAULT_LABEL
+
+    FileUtils.mkdir_p outdir
+    FileUtils.cp Dir["example/*"], outdir
+    config_path = "#{outdir}/config.json"
+    config = File.read config_path
+    open(config_path, 'w') do |f|
+      vars = {name: name, label: label}
+      f.write(config % vars)
+    end
+  end
+
+  def self.verify(name)
+    raise VerifierError, "Name is required" unless name
+
+    problems, recommendations = Verifier.new(name).verify
+
+    puts ""
+    if problems.empty?
+      puts "Service definition for #{name} successfully verified."
+    else
+      puts "#{problems.length} issues with #{name}:"
+      puts ""
+      problems.each do |description|
+        puts " * #{description}"
+      end
+    end
+
+    unless recommendations.empty?
+      puts ""
+      puts "#{recommendations.length} recommendations for #{name}:"
+      puts ""
+      recommendations.each do |description|
+        puts " * #{description}"
+      end
+    end
+
+    puts ""
+  end
+
+  
+end
