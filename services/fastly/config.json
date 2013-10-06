@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "fastly",
+    "label": "Fastly",
+    "description": "Fastly is a CDN (Content Delivery Network)."
+  },
+  "records": [
+    {
+      "name": "",
+      "type": "ALIAS",
+      "content": "global.prod.fastly.net",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "global.prod.fastly.net",
+      "ttl": 3600
+    }
+  ]
+}
+
