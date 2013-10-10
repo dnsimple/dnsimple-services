@@ -18,18 +18,6 @@
       "ttl": 3600
     },
     {
-      "name": "mg._domainkey.email",
-      "type": "CNAME",
-      "content": "dkim.mailgun.org",
-      "ttl": 3600
-    },
-    {
-      "name": "mg._domainkey.email",
-      "type": "CNAME",
-      "content": "dkim.mailgun.org",
-      "ttl": 3600
-    },
-    {
       "name": "",
       "type": "MX",
       "content": "mxa.mailgun.org",
