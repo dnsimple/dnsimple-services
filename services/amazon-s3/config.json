@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "amazon-s3",
-    "label": "Amazon S3",
+    "label": "AWS S3",
     "description": "Amazon Simple Storage Service provides a fully redundant data storage infrastructure."
   }, 
   "records": [
