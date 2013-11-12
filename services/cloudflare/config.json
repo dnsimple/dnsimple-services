@@ -13,7 +13,8 @@
     {
       "name": "password",
       "label": "Password",
-      "description": "Either your existing CloudFlare password or a new password if this is a new CloudFlare account"
+      "description": "Either your existing CloudFlare password or a new password if this is a new CloudFlare account",
+      "password": true
     },
     {
       "name": "target_address_or_host",
