@@ -7,14 +7,14 @@
   "records": [
     {
       "name": "",
-      "type": "A",
-      "content": "65.39.205.57",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "www.squarespace6.com",
+      "content": "ext.squarespace.com",
       "ttl": 3600
     }
   ]
