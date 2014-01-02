@@ -1,0 +1,43 @@
+{
+  "config": {
+    "name": "office365",
+    "label": "Office 365",
+    "description": "Get virtually anywhere access to the latest Office applications, plus cloud-based IT services including business email, all with no IT expertise needed."
+  },
+  "fields": [
+    {
+      "name": "name",
+      "label": "Office 365 Name",
+      "description": "The subdomain given to you my Office 365",
+      "example": "yoursite"
+    }
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "MX",
+      "content": "{{name}}.pamx1.hotmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "TXT",
+      "content": "v=msv1 t={{name}}",
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "SPF",
+      "content": "v=spf1 include:hotmail.com ~all",
+      "ttl": 3600
+    },
+    {
+      "name": "_sipfederationtls._tcp",
+      "type": "SRV",
+      "content": "2 5061 federation.messenger.msn.com",
+      "prio": "10",
+      "ttl": 3600
+    }
+  ]
+}
+
