@@ -1,28 +1,28 @@
 {
   "config": {
-    "name": "office365",
-    "label": "Office 365",
-    "description": "Get virtually anywhere access to the latest Office applications, plus cloud-based IT services including business email, all with no IT expertise needed."
+    "name": "microsoft-live",
+    "label": "Microsoft Live",
+    "description": "A free modern email service from Microsoft."
   },
   "fields": [
     {
-      "name": "name",
-      "label": "Office 365 Name",
-      "description": "The subdomain given to you my Office 365",
-      "example": "yoursite"
+      "name": "identifier",
+      "label": "Identifier",
+      "description": "The identifier given to you by Microsoft Live",
+      "example": "abc123"
     }
   ],
   "records": [
     {
       "name": "",
       "type": "MX",
-      "content": "{{name}}.pamx1.hotmail.com",
+      "content": "{{identifier}}.pamx1.hotmail.com",
       "ttl": 3600
     },
     {
       "name": "",
       "type": "TXT",
-      "content": "v=msv1 t={{name}}",
+      "content": "v=msv1 t={{identifier}}",
       "ttl": 3600
     },
     {
