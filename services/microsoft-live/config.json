@@ -37,6 +37,48 @@
       "content": "2 5061 federation.messenger.msn.com",
       "prio": "10",
       "ttl": 3600
+    },
+    {
+      "name": "mail",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "maps",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "profile",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "photos",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "skydrive",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "groups",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
+    },
+    {
+      "name": "calendar",
+      "type": "CNAME",
+      "content": "go.domains.live.com",
+      "ttl": 3600
     }
   ]
 }
