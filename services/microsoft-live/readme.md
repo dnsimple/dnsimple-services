@@ -1,1 +1,1 @@
-Explain what the service is here.
+A free modern email service from Microsoft.
