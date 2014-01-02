@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "shopify",
+    "label": "Shopify",
+    "description": "Use Shopify to create your online store."
+  },
+  "fields": [
+
+  ],
+  "records": [
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "A",
+      "content": "204.93.213.45",
+      "ttl": 3600
+    }
+  ]
+}
+
