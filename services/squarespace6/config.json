@@ -2,17 +2,11 @@
   "config": {
     "name": "squarespace6",
     "label": "Squarespace 6",
-    "description": "Managed environment for creating and maintaining a beautiful website, blog, or portfolio. (Version 6)"
+    "description": "Managed environment for creating and maintaining a beautiful website, blog, or portfolio. (Version 6)",
+    "subdomain-required": true
   }, 
-  "records": [
+  "records": [ 
     {
-      "name": "",
-      "type": "URL",
-      "content": "http://www.{{domain}}",
-      "ttl": 3600
-    },
-    {
-      "name": "www",
       "type": "CNAME",
       "content": "ext.squarespace.com",
       "ttl": 3600

@@ -15,14 +15,7 @@
   ],
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
-      "content": "{{app}}.herokuapp.com",
-      "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
       "content": "{{app}}.herokuapp.com",
       "ttl": 3600
     }

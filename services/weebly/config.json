@@ -6,40 +6,29 @@
   },
   "records": [
     {
-      "name": "",
       "type": "A",
       "content": "199.34.228.55",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "A",
       "content": "199.34.228.56",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "A",
       "content": "199.34.228.57",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "A",
       "content": "199.34.228.58",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "A",
       "content": "199.34.228.59",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{domain}}",
-      "ttl": 3600
-    }
+    } 
   ]
 }

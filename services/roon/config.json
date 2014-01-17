@@ -16,12 +16,6 @@
       "type": "ALIAS",
       "content": "{{username}}.roon.io",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{username}}.roon.io",
-      "ttl": 3600
-    }
+    } 
   ]
 }

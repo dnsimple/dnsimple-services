@@ -44,6 +44,7 @@ The config section contains meta-data about the template. All of these attribute
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.
 * description - An English description of the template, used for display.
+* subdomain-required - An optional boolean indicating whether the or not the customer must provide a subdomain. Default: false
 
 ### Fields
 
@@ -65,7 +66,7 @@ A list of record objects which are rendered to create the real records.
 
 Each record may have the following attributes:
 
-* name - The host name (may be a blank string). Joined with the domain name to produce the fully-qualified record host name when rendered.
+* name - The host name (if omitted, it will be considered a blank string). Joined with the domain name to produce the fully-qualified record host name (optional subdomain + domain name) when rendered.
 * type - The DNS type (such as "A", "CNAME", "MX", etc).
 * content - The content of the record, such as an IP address or another host name. This depends on the record type.
 * ttl - The time-to-live for the record.
@@ -73,11 +74,12 @@ Each record may have the following attributes:
 
 The name, type and content fields may use variables defined in the Attributes section as well as any values returned by the service hook.
 
-Service records are rendered into the real records when the service is applied to a domain. All variables such as {{variable_name}} are replaced with attributes at this time.
+Service records are rendered into the real records when the service is applied to a domain. All variables such as {{variable_name}} are replaced with attributes at this time. If a subdomain is provided then the record name is prepended to the subdomain which is joined with the domain name. For example, if the record name is "email", the subdomain is "staging", and the domain "example.com", the full record name will be "email.staging.example.com". If the record name is provided but the subdomain is omitted, then the full name would be "email.example.com". If the record name is omitted then it would be "staging.example.com". If the subdomain is omitted and the record name is omitted, then it would be "example.com".
 
 In addition to custom attributes, there are also the following variables:
 
 * domain - The domain name, such as example.com.
+* subdomain - The subdomain name, such as www.
 
 ### Hook
 
@@ -93,6 +95,7 @@ The `url` attribute is a fully qualified URL that is invoked in one of several w
 The following parameters are always sent to the hook as an application/x-www-form-urlencoded body.
 
 * domain_name: The domain name that the service is being applied to.
+* subdomain: The subdomain that the service is being applied to. May be blank.
 * user_id: The DNSimple user ID of the customer applying the service.
 
 In addition to the parameters that are always sent, the values provided by the customer for any fields specified in the service definition are sent along as well.
