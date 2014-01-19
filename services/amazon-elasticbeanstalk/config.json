@@ -6,7 +6,7 @@
   },
   "fields": [
     {
-      "name": "subdomain",
+      "name": "site",
       "label": "Elastic Beanstalk Subdomain",
       "description": "Enter your elasticbeanstalk.com subdomain",
       "append": "elasticbeanstalk.com",
@@ -15,17 +15,10 @@
   ],
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
-      "content": "{{subdomain}}.elasticbeanstalk.com",
+      "content": "{{site}}.elasticbeanstalk.com",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{subdomain}}.elasticbeanstalk.com",
-      "ttl": 3600
-    }
+    } 
   ]
 }
 

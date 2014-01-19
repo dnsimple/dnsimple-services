@@ -2,11 +2,11 @@
   "config": {
     "name": "blogger",
     "label": "Blogger",
-    "description": "Use Blogger for your blog."
+    "description": "Use Blogger for your blog.",
+    "default-subdomain": "www"
   },
   "records": [
     {
-      "name": "blog",
       "type": "CNAME",
       "content": "ghs.google.com",
       "ttl": 3600

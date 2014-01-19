@@ -6,16 +6,9 @@
   },
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
       "content": "hosted.djee.se",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{domain}}",
-      "ttl": 3600
-    }
+    } 
   ]
 }

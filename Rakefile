@@ -23,9 +23,20 @@ desc "Verify a service"
 task :verify, :name do |t, args|
   name = args[:name]
 
-  begin
-    DnsimpleServices.verify(name)
-  rescue DnsimpleServices::VerifierError => e
-    puts "Error: #{e}"
+  if name
+    begin
+      DnsimpleServices.verify(name)
+    rescue DnsimpleServices::VerifierError => e
+      puts "Error: #{e}"
+    end
+  else
+    Dir.entries("services").each do |service_name|
+      puts "Checking #{service_name}"
+      begin
+        DnsimpleServices.verify(service_name)
+      rescue DnsimpleServices::VerifierError => e
+        puts "Error: #{e}"
+      end
+    end
   end
 end

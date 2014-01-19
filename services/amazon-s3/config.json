@@ -6,17 +6,10 @@
   }, 
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
       "content": "{{domain}}.s3-website-us-east-1.amazonaws.com",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "www.{{domain}}.s3-website-us-east-1.amazonaws.com",
-      "ttl": 3600
-    }
+    } 
   ]
 }
 

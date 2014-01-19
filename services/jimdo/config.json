@@ -18,25 +18,16 @@
   "records": [
     {
       "type": "ALIAS",
-      "name": "",
       "content": "{{jimdo_name}}.jimdo.com",
       "ttl": 3600
-    },
+    }, 
     {
-      "type": "CNAME",
-      "name": "www",
-      "content": "{{jimdo_name}}.jimdo.com",
-      "ttl": 3600
-    },
-    {
-      "name": "",
       "type": "MX",
       "content": "mx1.jimdo.com",
       "prio": 10,
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "MX",
       "content": "mx2.jimdo.com",
       "prio": 10,
