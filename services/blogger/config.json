@@ -3,7 +3,7 @@
     "name": "blogger",
     "label": "Blogger",
     "description": "Use Blogger for your blog.",
-    "subdomain-required": true
+    "default-subdomain": "www"
   },
   "records": [
     {

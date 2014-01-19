@@ -2,12 +2,11 @@
   "config": {
     "name": "paperplane",
     "label": "Paperplane.io",
-    "description": "Radically simple static hosting.",
-    "subdomain-required": true
+    "description": "Radically simple static hosting."
   },
   "records": [ 
     {
-      "type": "CNAME",
+      "type": "ALIAS",
       "content": "proxy.paperplane.io",
       "ttl": 3600
     }

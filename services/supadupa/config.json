@@ -3,7 +3,7 @@
     "name": "supadupa",
     "label": "SupaDupa",
     "description": "An e-commerce platform to easily create a stunning online store.",
-    "subdomain-required": true
+    "default-subdomain": "www"
   }, 
   "records": [ 
     {

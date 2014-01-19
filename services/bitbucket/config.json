@@ -3,7 +3,7 @@
     "name": "bitbucket",
     "label": "Bitbucket",
     "description": "Access your Bitbucket repositories from git.domain.tld",
-    "subdomain-required": true
+    "default-subdomain": "git"
   }, 
   "records": [
     {

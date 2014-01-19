@@ -2,8 +2,7 @@
   "config": {
     "name": "shopify",
     "label": "Shopify",
-    "description": "Use Shopify to create your online store.",
-    "subdomain-required": true
+    "description": "Use Shopify to create your online store."
   },
   "records": [ 
     {

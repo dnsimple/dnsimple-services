@@ -3,7 +3,7 @@
     "name": "cloudflare",
     "label": "CloudFlare",
     "description": "Protect and accelerate your web site.",
-    "subdomain-required": true
+    "default-subdomain": "www"
   },
   "fields": [
     {

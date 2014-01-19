@@ -3,7 +3,7 @@
     "name": "wordpress",
     "label": "WordPress",
     "description": "Share with the world, your community, or your closest friends.",
-    "subdomain-required": true
+    "default-subdomain": "blog"
   },
   "fields": [
     {

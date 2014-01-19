@@ -44,7 +44,7 @@ The config section contains meta-data about the template. All of these attribute
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.
 * description - An English description of the template, used for display.
-* subdomain-required - An optional boolean indicating whether the or not the customer must provide a subdomain. Default: false
+* default-subdomain - Optional: If the service requires a subdomain and none is provided then use this.
 
 ### Fields
 

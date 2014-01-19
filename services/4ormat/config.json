@@ -3,7 +3,7 @@
     "name": "4ormat",
     "label": "4ormat",
     "description": "4ormat is an online portfolio platform for professionally showcasing your work.",
-    "subdomain-required": true
+    "default-subdomain": "www"
   },
   "records": [
     {

@@ -3,7 +3,7 @@
     "name": "tumblr",
     "label": "Tumblr",
     "description": "Use Tumblr for your blog.",
-    "subdomain-required": true
+    "default-subdomain": "blog"
   },
   "records": [ 
     {
