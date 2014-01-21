@@ -2,17 +2,11 @@
   "config": {
     "name": "4ormat",
     "label": "4ormat",
-    "description": "4ormat is an online portfolio platform for professionally showcasing your work."
+    "description": "4ormat is an online portfolio platform for professionally showcasing your work.",
+    "default-subdomain": "www"
   },
   "records": [
     {
-      "name": "",
-      "type": "URL",
-      "content": "http://www.{{domain}}",
-      "ttl": 3600
-    },
-    {
-      "name": "www",
       "type": "CNAME",
       "content": "4ormat.com",
       "ttl": 3600

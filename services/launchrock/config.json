@@ -6,7 +6,6 @@
   },
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
       "content": "host.launchrock.com",
       "ttl": 3600
@@ -16,13 +15,7 @@
       "type": "CNAME",
       "content": "host.launchrock.com",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{domain}}",
-      "ttl": 3600
-    }
+    } 
   ]
 }
 

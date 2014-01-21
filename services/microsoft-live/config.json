@@ -14,19 +14,16 @@
   ],
   "records": [
     {
-      "name": "",
       "type": "MX",
       "content": "{{identifier}}.pamx1.hotmail.com",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "TXT",
       "content": "v=msv1 t={{identifier}}",
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "SPF",
       "content": "v=spf1 include:hotmail.com ~all",
       "ttl": 3600

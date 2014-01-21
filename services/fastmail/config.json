@@ -6,14 +6,12 @@
   },
   "records": [
     {
-      "name": "",
       "type": "MX",
       "content": "in1-smtp.messagingengine.com",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "name": "",
       "type": "MX",
       "content": "in2-smtp.messagingengine.com",
       "ttl": 3600,
@@ -26,7 +24,6 @@
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "SPF",
       "content": "v=spf1 include:spf.messagingengine.com ~all",
       "ttl": 3600

@@ -6,21 +6,18 @@
   },
   "records": [
     {
-      "name": "",
       "content": "mx-1.rightbox.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "name": "",
       "content": "mx-2.rightbox.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "name": "",
       "content": "mx-3.rightbox.com",
       "type": "MX",
       "ttl": 3600,

@@ -6,17 +6,10 @@
   },
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
       "content": "global.prod.fastly.net",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "global.prod.fastly.net",
-      "ttl": 3600
-    }
+    } 
   ]
 }
 
