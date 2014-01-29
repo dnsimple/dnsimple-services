@@ -61,7 +61,7 @@
       "prio": 10
     },
     {
-      "content": "v=spf1 a include:_spf.google.com -all",
+      "content": "v=spf1 a include:_spf.google.com ~all",
       "type": "SPF",
       "ttl": 3600
     },
