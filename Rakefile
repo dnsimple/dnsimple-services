@@ -5,7 +5,7 @@ require_relative 'lib/dnsimple_services'
 
 ## The following are used by Rake
 
-task default: [:validate]
+task default: [:verify]
 
 desc "Generate a new service"
 task :generate, :name do |t, args|
