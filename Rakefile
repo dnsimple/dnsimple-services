@@ -30,7 +30,7 @@ task :verify, :name do |t, args|
       puts "Error: #{e}"
     end
   else
-    Dir.entries("services").each do |service_name|
+    Dir.entries("services").reject { |n| n == "." || n == ".." }.each do |service_name|
       puts "Checking #{service_name}"
       begin
         DnsimpleServices.verify(service_name)
