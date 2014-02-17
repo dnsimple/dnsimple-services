@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "atmail",
-    "label": "Messaging solutions for ISP's, Enterprise and Small Business.",
+    "label": "Atmail",
     "description": "Atmail provides messaging solutions for ISP's, enterprise and small business. Email server, webmail and calendar deployed on-premise or in the cloud."
   },
   "records": [{
