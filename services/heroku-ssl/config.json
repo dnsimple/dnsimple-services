@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "heroku-ssl",
+    "label": "Heroku SSL",
+    "description": "Use Heroku as your web host, with SSL support."
+  },
+  "fields": [
+    {
+      "name": "app",
+      "label": "Heroku SSL Endpoint Name",
+      "description": "Your SSL endpoint name is part of your Heroku SSL URL, for example: in funky-chicken-2211.herokussl.com the SSL endpoint name is funky-chicken-2211",
+      "append": ".herokussl.com",
+      "example": "funky-chicken-2211"
+    }
+  ],
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "{{app}}.herokussl.com",
+      "ttl": 3600
+    }
+  ]
+}
+
+
