@@ -1,0 +1,30 @@
+{
+  "config": {
+    "name": "urlforward",
+    "label": "Simply forward all web traffic for your domain",
+    "description": "Forward all of the web traffic for your domain with one click"
+  },
+  "fields": [
+    {
+      "name": "url",
+      "label": "URL to forward to",
+      "description": "The full URL of the site to forward to. For example: http://example.com or https://example.com",
+      "example": "http://example.com"
+    }
+  ],
+  "records": [ 
+    {
+      "name": "",
+      "type": "URL",
+      "content": "{{url}}",
+      "ttl": 3600
+    },
+    {
+      "name": "*",
+      "type": "URL",
+      "content": "{{url}}",
+      "ttl": 3600
+    }
+  ]
+}
+
