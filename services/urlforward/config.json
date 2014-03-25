@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "urlforward",
-    "label": "Simply forward all web traffic for your domain",
+    "label": "URL Forwarding",
     "description": "Forward all of the web traffic for your domain with one click"
   },
   "fields": [
