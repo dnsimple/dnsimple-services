@@ -20,7 +20,7 @@
       "ttl": 3600
     },
     {
-      "name": "*",
+      "name": "www",
       "type": "URL",
       "content": "{{url}}",
       "ttl": 3600
