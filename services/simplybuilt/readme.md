@@ -1,1 +1,1 @@
-Explain what the service is here.
+Create a website in a matter of minutes with our easy-to-use interface, and just as quickly keep it up-to-date with your latest content using [SimplyBuilt](http://www.simplybuilt.com).
