@@ -1,0 +1,31 @@
+{
+  "config": {
+    "name": "simplybuilt",
+    "label": "SimplyBuilt",
+    "description": "Build a professional website that looks great on all devices."
+  },
+  "fields": [
+    {
+      "name": "sub-domain",
+      "label": "Subdomain you'll use for SimplyBuilt",
+      "description": "Enter the subdomain that you want to use on SimplyBuilt",
+      "append": "simplybuilt.com",
+      "example": "www"
+    }
+  ],
+  "records": [
+    {
+      "name": "{{sub-domain}}",
+      "type": "CNAME",
+      "content": "sites.onsimplybuilt.com",
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://{{sub-domain}}.{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
+
