@@ -1,3 +1,3 @@
-After adding this service, you'll need to configure your SimplyBuilt site to [use this custom domain](https://support.simplybuilt.com/set-site-details/set-your-site-address).
+After adding this service, you'll need to configure your SimplyBuilt site to [use this custom domain](https://support.simplybuilt.com/set-site-details/set-your-site-address) (www.yourdomain.com).
 
 If you have any problems or questions, reach out to us via [email](mailto:support@simplybuilt.com), [SimplyBuilt's Neighborhood](http://neighborhood.simplybuilt.com), or on Twitter [@SimplyBuilt](https://twitter.com/simplybuilt).
