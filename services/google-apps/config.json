@@ -49,13 +49,13 @@
       "prio": 5
     },
     {
-      "content": "aspmx2.googlemail.com",
+      "content": "alt3.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "content": "aspmx3.googlemail.com",
+      "content": "alt4.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
