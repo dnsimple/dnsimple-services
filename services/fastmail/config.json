@@ -1,0 +1,33 @@
+{
+  "config": {
+    "name": "fastmail",
+    "label": "Fast, reliable email",
+    "description": "Fast, reliable email for businesses, families and professionals."
+  },
+  "records": [
+    {
+      "type": "MX",
+      "content": "in1-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "type": "MX",
+      "content": "in2-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 20
+    },
+    {
+      "name": "mail",
+      "type": "CNAME",
+      "content": "www.fastmail.fm",
+      "ttl": 3600
+    },
+    {
+      "type": "SPF",
+      "content": "v=spf1 include:spf.messagingengine.com ~all",
+      "ttl": 3600
+    }
+  ]
+}
+

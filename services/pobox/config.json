@@ -1,0 +1,27 @@
+{
+  "config": {
+    "name": "pobox",
+    "label": "Pobox",
+    "description": "MX records to use your own domain with Pobox.com"
+  },
+  "records": [
+    {
+      "content": "mx-1.rightbox.com",
+      "type": "MX",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "content": "mx-2.rightbox.com",
+      "type": "MX",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "content": "mx-3.rightbox.com",
+      "type": "MX",
+      "ttl": 3600,
+      "prio": 10
+    }
+  ]
+}

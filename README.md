@@ -6,6 +6,27 @@ Welcome to the home of the [DNSimple](https://dnsimple.com) service templates. T
 
 Read through the documentation below and look at the other templates in this repository before starting your own. If you have any questions feel free to get in touch with the DNSimple team using the support@dnsimple.com email address. Once you're ready to create your template, fork the project, add the template and issue a pull request.
 
+# Tools
+
+If you have ruby installed then you can use the following steps to get a few rake tasks to make creating new service configurations easier:
+
+* `gem install bundler --no-ri --no-rdoc`
+* `bundle install`
+
+Once you've done that you have access to several tasks:
+
+To generate a new service definition:
+
+`rake generate[$name]` where $name is the short name of your service (for example: wordpress)
+
+For example: `rake verify[my-service]`
+
+To verify that a service definition meets our requirements for deployment:
+
+`rake verify[$name]` where $name is the short name of your service
+
+For example: `rake verify[blogger]`
+
 # Service Definitions
 
 Services are each stored in their own directory. A service definition must have a config.json file and a logo.png file at minimum. The logo.png must be 228 pixels wide by 78 pixels high.
@@ -14,15 +35,16 @@ Services may have a readme.md file and/or an instructions.md file as well.
 
 ## config.json
 
-The config section contains meta-data about the template.
+The JSON object defined in config.json holds all of the configuration details for the service. At minimum it must include the config section and the records collection with at least one record, however it may include the fields collection and a hook object as well.
+
+### Config
+
+The config section contains meta-data about the template. All of these attributes are required.
 
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.
 * description - An English description of the template, used for display.
-
-## Template
-
-The template object holds all of the configuration details for the template. At minimum it must include the records collection, however it may include the fields collection and a hook object as well.
+* default-subdomain - Optional: If the service requires a subdomain and none is provided then use this.
 
 ### Fields
 
@@ -44,7 +66,7 @@ A list of record objects which are rendered to create the real records.
 
 Each record may have the following attributes:
 
-* name - The host name (may be a blank string). Joined with the domain name to produce the fully-qualified record host name when rendered.
+* name - The host name (if omitted, it will be considered a blank string). Joined with the domain name to produce the fully-qualified record host name (optional subdomain + domain name) when rendered.
 * type - The DNS type (such as "A", "CNAME", "MX", etc).
 * content - The content of the record, such as an IP address or another host name. This depends on the record type.
 * ttl - The time-to-live for the record.
@@ -52,11 +74,12 @@ Each record may have the following attributes:
 
 The name, type and content fields may use variables defined in the Attributes section as well as any values returned by the service hook.
 
-Service records are rendered into the real records when the service is applied to a domain. All variables such as {{variable_name}} are replaced with attributes at this time.
+Service records are rendered into the real records when the service is applied to a domain. All variables such as {{variable_name}} are replaced with attributes at this time. If a subdomain is provided then the record name is prepended to the subdomain which is joined with the domain name. For example, if the record name is "email", the subdomain is "staging", and the domain "example.com", the full record name will be "email.staging.example.com". If the record name is provided but the subdomain is omitted, then the full name would be "email.example.com". If the record name is omitted then it would be "staging.example.com". If the subdomain is omitted and the record name is omitted, then it would be "example.com".
 
 In addition to custom attributes, there are also the following variables:
 
 * domain - The domain name, such as example.com.
+* subdomain - The subdomain name, such as www.
 
 ### Hook
 
@@ -72,6 +95,7 @@ The `url` attribute is a fully qualified URL that is invoked in one of several w
 The following parameters are always sent to the hook as an application/x-www-form-urlencoded body.
 
 * domain_name: The domain name that the service is being applied to.
+* subdomain: The subdomain that the service is being applied to. May be blank.
 * user_id: The DNSimple user ID of the customer applying the service.
 
 In addition to the parameters that are always sent, the values provided by the customer for any fields specified in the service definition are sent along as well.

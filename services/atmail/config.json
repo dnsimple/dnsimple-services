@@ -1,0 +1,23 @@
+{
+  "config": {
+    "name": "atmail",
+    "label": "Atmail",
+    "description": "Atmail provides messaging solutions for ISP's, enterprise and small business. Email server, webmail and calendar deployed on-premise or in the cloud."
+  },
+  "records": [{
+    "type": "MX",
+    "content": "mx-a.atmailcloud.com",
+    "ttl": 3600,
+    "prio": 10
+  }, {
+    "type": "MX",
+    "content": "mx-b.atmailcloud.com",
+    "ttl": 3600,
+    "prio": 20
+  }, {
+    "name": "webmail",
+    "type": "CNAME",
+    "content": "web-a.atmailcloud.com",
+    "ttl": 3600
+  }]
+}

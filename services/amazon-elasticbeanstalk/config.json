@@ -1,0 +1,24 @@
+{
+  "config": {
+    "name": "amazon-elasticbeanstalk",
+    "label": "AWS Elastic Beanstalk",
+    "description": "Amazon Elastic Beanstalk is an easy way for you to quickly deploy and manage applications in the AWS cloud"
+  },
+  "fields": [
+    {
+      "name": "site",
+      "label": "Elastic Beanstalk Subdomain",
+      "description": "Enter your elasticbeanstalk.com subdomain",
+      "append": "elasticbeanstalk.com",
+      "example": "yoursite"
+    }
+  ],
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "{{site}}.elasticbeanstalk.com",
+      "ttl": 3600
+    } 
+  ]
+}
+

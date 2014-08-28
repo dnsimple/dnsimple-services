@@ -2,19 +2,11 @@
   "config": {
     "name": "bitbucket",
     "label": "Bitbucket",
-    "description": "Access your Bitbucket repositories from git.domain.tld"
-  },
-  "fields": [
-    {
-      "name": "subdomain",
-      "label": "Subdomain",
-      "description": "The subdomain, i.e. `git` if you set the CNAME field in your Bitbucket account to `git.domain.tld`.",
-      "example": "git"
-    }
-  ],
+    "description": "Access your Bitbucket repositories from git.domain.tld",
+    "default-subdomain": "git"
+  }, 
   "records": [
     {
-      "name": "{{subdomain}}",
       "type": "CNAME",
       "content": "bitbucket.org",
       "ttl": 3600

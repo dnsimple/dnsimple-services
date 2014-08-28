@@ -15,7 +15,6 @@
   ],
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
       "content": "{{app}}.herokuapp.com",
       "ttl": 3600

@@ -2,22 +2,13 @@
   "config": {
     "name": "blogger",
     "label": "Blogger",
-    "description": "Use Blogger for your blog."
+    "description": "Use Blogger for your blog.",
+    "default-subdomain": "www"
   },
-  "fields": [
-    {
-      "name": "blog",
-      "label": "Blogger Blog Name",
-      "description": "Your blog name is part of your Blogspot URL, for example: in myamazingblog123.blogspot.com the blog name is myamazingblog123.",
-      "append": ".blogspot.com",
-      "example": "myamazingblog123"
-    }
-  ],
   "records": [
     {
-      "name": "blog",
       "type": "CNAME",
-      "content": "{{blog}}.blogspot.com",
+      "content": "ghs.google.com",
       "ttl": 3600
     }
   ]

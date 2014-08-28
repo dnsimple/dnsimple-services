@@ -21,12 +21,6 @@
       "name": "",
       "content": "{{github_name}}.github.io",
       "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "name": "www",
-      "content": "{{github_name}}.github.io",
-      "ttl": 3600
-    }
+    } 
   ]
 }

@@ -1,0 +1,1 @@
+Enter your Divshot app name to continue. You will also need to [add a custom domain](http://docs.divshot.com/guides/domains) to your Divshot application.

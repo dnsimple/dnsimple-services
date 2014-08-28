@@ -6,7 +6,6 @@
   },
   "records": [
     {
-      "name": "",
       "type": "SPF",
       "content": "v=spf1 include:mailgun.org ~all",
       "ttl": 3600
@@ -18,26 +17,12 @@
       "ttl": 3600
     },
     {
-      "name": "mg._domainkey.email",
-      "type": "CNAME",
-      "content": "dkim.mailgun.org",
-      "ttl": 3600
-    },
-    {
-      "name": "mg._domainkey.email",
-      "type": "CNAME",
-      "content": "dkim.mailgun.org",
-      "ttl": 3600
-    },
-    {
-      "name": "",
       "type": "MX",
       "content": "mxa.mailgun.org",
       "prio": 10,
       "ttl": 3600
     },
     {
-      "name": "",
       "type": "MX",
       "content": "mxb.mailgun.org",
       "prio": 10,

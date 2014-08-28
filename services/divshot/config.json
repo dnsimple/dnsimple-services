@@ -1,0 +1,30 @@
+{
+  "config": {
+    "name": "divshot",
+    "label": "Divshot",
+    "description": "Use Divshot as your web host."
+  },
+  "fields": [
+    {
+      "name": "app",
+      "label": "Divshot App Name",
+      "description": "Your app name is part of your Divshot URL, for example: in yourapp.divshot.io the app name is yourapp",
+      "append": ".divshot.io",
+      "example": "yourapp"
+    }
+  ],
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "{{app}}.divshot.io",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{app}}.divshot.io",
+      "ttl": 3600
+    }
+  ]
+}
+

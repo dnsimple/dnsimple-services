@@ -2,19 +2,19 @@
   "config": {
     "name": "wordpress",
     "label": "WordPress",
-    "description": "Share with the world, your community, or your closest friends."
+    "description": "Share with the world, your community, or your closest friends.",
+    "default-subdomain": "blog"
   },
   "fields": [
     {
-      "name": "subdomain",
+      "name": "site",
       "description": "Your Wordpress.com subdomain"
     }
   ],
   "records": [ 
     {
-      "name": "blog",
       "type": "CNAME",
-      "content": "{{subdomain}}.wordpress.com",
+      "content": "{{site}}.wordpress.com",
       "ttl": 3600
     }
   ]

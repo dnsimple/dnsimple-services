@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "simplybuilt",
+    "label": "SimplyBuilt",
+    "description": "Build a professional website that looks great on all devices."
+  },
+  "fields": [
+
+  ],
+  "records": [
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "sites.onsimplybuilt.com",
+      "ttl": 3600
+    },
+    {
+      "name": "",
+      "type": "URL",
+      "content": "http://www.{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
+

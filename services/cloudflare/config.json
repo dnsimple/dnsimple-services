@@ -2,7 +2,8 @@
   "config": {
     "name": "cloudflare",
     "label": "CloudFlare",
-    "description": "Protect and accelerate your web site."
+    "description": "Protect and accelerate your web site.",
+    "default-subdomain": "www"
   },
   "fields": [
     {
@@ -13,7 +14,8 @@
     {
       "name": "password",
       "label": "Password",
-      "description": "Either your existing CloudFlare password or a new password if this is a new CloudFlare account"
+      "description": "Either your existing CloudFlare password or a new password if this is a new CloudFlare account",
+      "password": true
     },
     {
       "name": "target_address_or_host",
@@ -21,17 +23,10 @@
       "description": "Enter the IP address or fully-qualified hostname for your server where your website lives"
     }
   ],
-  "records": [
+  "records": [ 
     {
-      "name": "",
-      "type": "URL",
-      "content": "http://www.{{domain}}",
-      "ttl": 3600
-    },
-    {
-      "name": "www",
       "type": "CNAME",
-      "content": "www.{{domain}}.cdn.cloudflare.net",
+      "content": "{{subdomain}}.{{domain}}.cdn.cloudflare.net",
       "ttl": 3600
     },
     {

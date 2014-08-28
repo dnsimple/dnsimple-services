@@ -2,11 +2,11 @@
   "config": {
     "name": "tumblr",
     "label": "Tumblr",
-    "description": "Use Tumblr for your blog."
+    "description": "Use Tumblr for your blog.",
+    "default-subdomain": "blog"
   },
   "records": [ 
     {
-      "name": "blog",
       "type": "CNAME",
       "content": "domains.tumblr.com",
       "ttl": 3600

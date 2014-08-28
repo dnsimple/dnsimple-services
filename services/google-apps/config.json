@@ -31,43 +31,37 @@
     },
 
     {
-      "name": "",
       "content": "aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 1
     },
     {
-      "name": "",
       "content": "alt1.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 5
     },
     {
-      "name": "",
       "content": "alt2.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 5
     },
     {
-      "name": "",
-      "content": "aspmx2.googlemail.com",
+      "content": "alt3.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "name": "",
-      "content": "aspmx3.googlemail.com",
+      "content": "alt4.aspmx.l.google.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "name": "",
-      "content": "v=spf1 a include:_spf.google.com -all",
+      "content": "v=spf1 a include:_spf.google.com ~all",
       "type": "SPF",
       "ttl": 3600
     },

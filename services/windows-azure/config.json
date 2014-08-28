@@ -6,27 +6,20 @@
   },
   "fields": [
     {
-      "name": "subdomain",
+      "name": "site",
       "description": "Subdomain for your Azure site"
     }
   ],
   "records": [
     {
-      "name": "",
       "type": "ALIAS",
-      "content": "{{subdomain}}.azurewebsites.net",
+      "content": "{{site}}.azurewebsites.net",
       "ttl": 3600
-    },
-    {
-      "name": "www",
-      "type": "CNAME",
-      "content": "{{subdomain}}.azurewebsites.net",
-      "ttl": 3600
-    },
+    }, 
     {
       "name": "awverify",
       "type": "CNAME",
-      "content": "awverify.{{subdomain}}.azurewebsites.net",
+      "content": "awverify.{{site}}.azurewebsites.net",
       "ttl": 3600
     }
   ]

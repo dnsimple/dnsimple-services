@@ -1,0 +1,20 @@
+{
+  "config": {
+    "name": "%{name}",
+    "label": "%{label}",
+    "description": "This is a short description of the service",
+    "subdomain-required": true
+  },
+  "fields": [
+
+  ],
+  "records": [ 
+    {
+      "name": "",
+      "type": "CNAME",
+      "content": "example.com",
+      "ttl": 3600
+    }
+  ]
+}
+
