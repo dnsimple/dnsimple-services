@@ -1,14 +1,14 @@
 {
   "config": {
-    "name": "4ormat",
-    "label": "4ormat",
-    "description": "4ormat is an online portfolio platform for professionally showcasing your work.",
+    "name": "format",
+    "label": "format",
+    "description": "format is an online portfolio platform for professionally showcasing your work.",
     "default-subdomain": "www"
   },
   "records": [
     {
       "type": "CNAME",
-      "content": "4ormat.com",
+      "content": "format.com",
       "ttl": 3600
     }
   ]
