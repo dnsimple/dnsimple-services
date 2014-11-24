@@ -1,7 +1,7 @@
 {
   "config": {
-    "name": "format",
-    "label": "format",
+    "name": "4ormat",
+    "label": "4ormat",
     "description": "format is an online portfolio platform for professionally showcasing your work.",
     "default-subdomain": "www"
   },
