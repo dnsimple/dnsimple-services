@@ -1,0 +1,27 @@
+{
+  "config": {
+    "name": "rackspace-email",
+    "label": "Rackspace Email",
+    "description": "Rackspace Email provides managed email hosting services including hosted Microsoft Exchange."
+  },
+  "records": [
+    {
+      "name": "autodiscover",
+      "type": "CNAME",
+      "content": "autodiscover.emailsrvr.com",
+      "ttl": 86400
+    },
+    {
+      "type": "MX",
+      "content": "mx1.emailsrvr.com",
+      "prio": 10,
+      "ttl": 3600
+    },
+    {
+      "type": "MX",
+      "content": "mx2.emailsrvr.com",
+      "prio": 20,
+      "ttl": 3600
+    }
+  ]
+}
