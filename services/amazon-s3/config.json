@@ -3,13 +3,20 @@
     "name": "amazon-s3",
     "label": "AWS S3",
     "description": "Amazon Simple Storage Service provides a fully redundant data storage infrastructure."
-  }, 
+  },
+  "fields": [
+    {
+      "name": "region",
+      "label": "AWS Region",
+      "description": "The abbreviation of the AWS region the bucket is stored",
+      "example": "us-east-1"
+    }
+  ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{domain}}.s3-website-us-east-1.amazonaws.com",
+      "content": "{{domain}}.s3-website-{{region}}.amazonaws.com",
       "ttl": 3600
-    } 
+    }
   ]
 }
-
