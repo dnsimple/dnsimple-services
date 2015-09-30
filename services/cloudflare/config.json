@@ -37,6 +37,6 @@
     }
   ],
   "hook": {
-    "url": "https://cloudflare.services.dnsimple.com/"
+    "url": "https://dnsimple-cloudflare-hook.herokuapp.com/"
   }
 }
