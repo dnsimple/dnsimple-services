@@ -1,0 +1,1 @@
+Enter your Heroku SSL endpoint name to continue. You must install your SSL certificate on Heroku first. When you install your SSL certificate, Heroku will provide you with your SSL endpoint. You must also add your custom domain to your Heroku app settings.
