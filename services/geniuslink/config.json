@@ -1,0 +1,14 @@
+{
+  "config": {
+    "name": "geniuslink",
+    "label": "Geniuslink",
+    "description": "Intelligent Link Shortener.  Earn more with short links that work across any country, store, device and OS."
+  },
+  "records": [ 
+    {
+      "type": "ALIAS",
+      "content": "geni.us",
+      "ttl": 60
+    }
+  ]
+}
