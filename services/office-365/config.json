@@ -73,24 +73,14 @@
       "ttl": 3600
     },
     {
-      "content": "",
-      "symbolic": "_sip",
-      "target": "sipdir.online.lync.com",
-      "protocol": "_tls",
-      "prio": "100",
-      "weight": "1",
-      "port": "443",
+      "name": "_sip._tls",
+      "content": "100 1 443 sipdir.online.lync.com",
       "type": "SRV",
       "ttl": 3600
     },
     {
-      "content": "",
-      "symbolic": "_sipfederationtls",
-      "target": "sipfed.online.lync.com",
-      "protocol": "_tcp",
-      "prio": "100",
-      "weight": "1",
-      "port": "5061",
+      "name": "_sipfederationtls._tcp",
+      "content": "100 1 5061 sipfed.online.lync.com",
       "type": "SRV",
       "ttl": 3600
     }
