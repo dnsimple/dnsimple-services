@@ -1,0 +1,88 @@
+{
+  "config": {
+    "name": "office-365",
+    "label": "Office 365",
+    "description": "All the records you need for Office 365 to function."
+  },
+  "fields": [
+    {
+      "name": "verification",
+      "label": "Verification",
+      "description": "Enter your provided TXT record for verification",
+      "example": "MS=msXXXXXXXX"
+    },
+    {
+      "name": "mx",
+      "label": "MX Record",
+      "description": "Enter your provided MX record to route emails",
+      "example": "MSxxxxxxx",
+      "append": "mail.protection.outlook.com"
+    }
+  ],
+  "records": [
+    {
+      "content": "{{verification}}",
+      "type": "TXT",
+      "ttl": 3600
+    },
+     {
+      "content": "{{mx}}.mail.protection.outlook.com",
+      "type": "MX",
+      "prio": 0,
+      "ttl": 3600
+    },
+     {
+      "name": "autodiscover",
+      "content": "autodiscover.outlook.com",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "name": "lyncdiscover",
+      "content": "webdir.online.lync.com",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "name": "msoid",
+      "content": "clientconfig.microsoftonline-p.net",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "name": "sip",
+      "content": "sipdir.online.lync.com",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "name": "enterpriseregistration",
+      "content": "enterpriseregistration.windows.net",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "name": "enterpriseenrollment",
+      "content": "enterpriseenrollment.manage.microsoft.com",
+      "type": "CNAME",
+      "ttl": 3600
+    },
+    {
+      "content": "v=spf1 include:spf.protection.outlook.com -all",
+      "type": "SPF",
+      "ttl": 3600
+    },
+    {
+      "name": "_sip._tls",
+      "content": "100 1 443 sipdir.online.lync.com",
+      "type": "SRV",
+      "ttl": 3600
+    },
+    {
+      "name": "_sipfederationtls._tcp",
+      "content": "100 1 5061 sipfed.online.lync.com",
+      "type": "SRV",
+      "ttl": 3600
+    }
+  ]
+}
