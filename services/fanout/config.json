@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "fanout",
+    "label": "Fanout",
+    "description": "Fanout makes it easy to add realtime push to your API."
+  },
+
+  "fields": [
+    {
+      "name": "realm",
+      "label": "Realm ID",
+      "description": "This is your realm ID as shown in the Fanout control panel.",
+      "append": ".fanoutcdn.com",
+      "example": "f3dc0a7e"
+    }
+  ],
+
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "{{realm}}.fanoutcdn.com",
+      "ttl": 3600
+    } 
+  ]
+}
