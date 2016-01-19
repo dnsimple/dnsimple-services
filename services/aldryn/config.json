@@ -1,0 +1,29 @@
+{
+  "config": {
+    "name": "aldryn",
+    "label": "Divio Aldryn",
+    "description": "Lift django CMS into the cloud",
+    "subdomain-required": true
+  },
+  "fields": [
+    {
+      "name": "aldryn_project_domain",
+      "label": "Aldryn Project Domain",
+      "description": "e.g mysite.us.aldryn.io",
+      "example": "mysite.us.aldryn.io"
+    }
+  ],
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "{{aldryn_project_domain}}.aldryn.io",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "ALIAS",
+      "content": "{{aldryn_project_domain}}.aldryn.io",
+      "ttl": 3600
+    }
+  ]
+}
