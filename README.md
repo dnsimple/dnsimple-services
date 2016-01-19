@@ -13,6 +13,8 @@ If you have ruby installed then you can use the following steps to get a few rak
 * `gem install bundler --no-ri --no-rdoc`
 * `bundle install`
 
+If you have `docker` and `docker-compose` installed, you don't to install ruby. Just run `docker-compose run --rm dnsimple` to start a container with everything already installed.
+
 Once you've done that you have access to several tasks:
 
 To generate a new service definition:

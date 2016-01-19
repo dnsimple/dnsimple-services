@@ -1,0 +1,4 @@
+dnsimple:
+    build: .
+    volumes:
+        - "./:/usr/src/app"
