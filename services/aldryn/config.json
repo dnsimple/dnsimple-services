@@ -2,8 +2,7 @@
   "config": {
     "name": "aldryn",
     "label": "Divio Aldryn",
-    "description": "Lift django CMS into the cloud",
-    "subdomain-required": true
+    "description": "Lift django CMS into the cloud"
   },
   "fields": [
     {
