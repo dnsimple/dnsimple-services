@@ -20,7 +20,7 @@
     },
     {
       "name": "www",
-      "type": "ALIAS",
+      "type": "CNAME",
       "content": "{{project_domain}}",
       "ttl": 3600
     }
