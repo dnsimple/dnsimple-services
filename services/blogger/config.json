@@ -3,7 +3,8 @@
     "name": "blogger",
     "label": "Blogger",
     "description": "Use Blogger for your blog.",
-    "default-subdomain": "www"
+    "default-subdomain": "www",
+    "category": "blogging"
   },
   "records": [
     {

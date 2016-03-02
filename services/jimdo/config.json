@@ -2,7 +2,8 @@
   "config": {
     "name": "jimdo",
     "label": "Jimdo",
-    "description": "Use your own domain for your Jimdo website. You need to have Jimdo Pro or Business to use your own domain."
+    "description": "Use your own domain for your Jimdo website. You need to have Jimdo Pro or Business to use your own domain.",
+    "category": "hosting"
   },
 
   "fields": [

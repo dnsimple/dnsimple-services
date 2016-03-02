@@ -2,7 +2,8 @@
   "config": {
     "name": "heroku-ssl",
     "label": "Heroku SSL",
-    "description": "Use Heroku as your web host, with SSL support."
+    "description": "Use Heroku as your web host, with SSL support.",
+    "category": "infrastructure"
   },
   "fields": [
     {

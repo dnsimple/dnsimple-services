@@ -2,7 +2,8 @@
   "config": {
     "name": "paperplane",
     "label": "Paperplane.io",
-    "description": "Radically simple static hosting."
+    "description": "Radically simple static hosting.",
+    "category": "hosting"
   },
   "records": [ 
     {

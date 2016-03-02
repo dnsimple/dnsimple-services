@@ -2,7 +2,8 @@
   "config": {
     "name": "shopify",
     "label": "Shopify",
-    "description": "Use Shopify to create your online store."
+    "description": "Use Shopify to create your online store.",
+    "category": "e-commerce"
   },
   "records": [ 
     {

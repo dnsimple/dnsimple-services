@@ -2,7 +2,8 @@
   "config": {
     "name": "launchrock",
     "label": "LaunchRock",
-    "description": "Set up a \"Launching Soon\" page in minutes. Collect interest, increase sharing and build your audience."
+    "description": "Set up a \"Launching Soon\" page in minutes. Collect interest, increase sharing and build your audience.",
+    "category": "hosting"
   },
   "records": [
     {

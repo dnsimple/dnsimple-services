@@ -2,7 +2,8 @@
   "config": {
     "name": "mailgun",
     "label": "Mailgun",
-    "description": "Mailgun is a set of powerful APIs that allow you to send, receive, track and store email effortlessly."
+    "description": "Mailgun is a set of powerful APIs that allow you to send, receive, track and store email effortlessly.",
+    "category": "email"
   },
   "records": [
     {
