@@ -3,6 +3,7 @@
     "name": "%{name}",
     "label": "%{label}",
     "description": "This is a short description of the service",
+    "category": "infrastructure",
     "subdomain-required": true
   },
   "fields": [
