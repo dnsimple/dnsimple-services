@@ -44,7 +44,7 @@ The config section contains meta-data about the template. All of these attribute
 * name - The unique template name. All lower-case and only the characters a-z, 0-9 and the dash.
 * label - The human-readable template name, used for display.
 * description - An English description of the template, used for display.
-* category - ["blogging" | "hosting" | "infrastructure" | "email" | "e-commerce"]
+* category - ["blogging" | "hosting" | "infrastructure" | "email" | "e-commerce" | "support" ]
 * default-subdomain - Optional: If the service requires a subdomain and none is provided then use this.
 
 #### Categories
@@ -56,6 +56,7 @@ You have to choose one and only one category for your service:
 * infrastructure (CDN, link shorteners, office like suites)
 * email
 * e-commerce
+* support (customer support)
 
 ### Fields
 
