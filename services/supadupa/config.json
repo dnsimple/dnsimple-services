@@ -4,7 +4,7 @@
     "label": "SupaDupa",
     "description": "An e-commerce platform to easily create a stunning online store.",
     "default-subdomain": "www",
-    "category": "e-commerce"
+    "category": "ecommerce"
   }, 
   "records": [ 
     {

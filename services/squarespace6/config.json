@@ -4,7 +4,7 @@
     "label": "Squarespace 6",
     "description": "Managed environment for creating and maintaining a beautiful website, blog, or portfolio. (Version 6)",
     "default-subdomain": "www",
-    "category": "e-commerce"
+    "category": "ecommerce"
   }, 
   "records": [ 
     {

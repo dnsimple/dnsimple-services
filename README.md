@@ -55,7 +55,7 @@ You have to choose one and only one category for your service:
 * hosting (static pages, CMS)
 * infrastructure (CDN, link shorteners)
 * email
-* e-commerce
+* ecommerce
 * productivity (google-apps, office-365, marketing, support)
 
 ### Fields
