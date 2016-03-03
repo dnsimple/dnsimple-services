@@ -2,7 +2,8 @@
   "config": {
     "name": "aldryn",
     "label": "Divio Aldryn",
-    "description": "Lift django CMS into the cloud"
+    "description": "Lift django CMS into the cloud",
+    "category": "hosting"
   },
   "fields": [
     {

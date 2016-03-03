@@ -2,7 +2,8 @@
   "config": {
     "name": "fanout",
     "label": "Fanout",
-    "description": "Fanout makes it easy to add realtime push to your API."
+    "description": "Fanout makes it easy to add realtime push to your API.",
+    "category": "infrastructure"
   },
 
   "fields": [

@@ -2,7 +2,8 @@
   "config": {
     "name": "rackspace-email",
     "label": "Rackspace Email",
-    "description": "Rackspace Email provides managed email hosting services including hosted Microsoft Exchange."
+    "description": "Rackspace Email provides managed email hosting services including hosted Microsoft Exchange.",
+    "category": "email"
   },
   "records": [
     {

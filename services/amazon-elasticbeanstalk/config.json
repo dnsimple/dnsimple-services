@@ -2,7 +2,8 @@
   "config": {
     "name": "amazon-elasticbeanstalk",
     "label": "AWS Elastic Beanstalk",
-    "description": "Amazon Elastic Beanstalk is an easy way for you to quickly deploy and manage applications in the AWS cloud"
+    "description": "Amazon Elastic Beanstalk is an easy way for you to quickly deploy and manage applications in the AWS cloud",
+    "category": "infrastructure"
   },
   "fields": [
     {

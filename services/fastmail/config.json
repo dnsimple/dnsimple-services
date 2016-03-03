@@ -2,7 +2,8 @@
   "config": {
     "name": "fastmail",
     "label": "Fast, reliable email",
-    "description": "Fast, reliable email for businesses, families and professionals."
+    "description": "Fast, reliable email for businesses, families and professionals.",
+    "category": "email"
   },
   "records": [
     {

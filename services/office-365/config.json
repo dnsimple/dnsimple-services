@@ -2,7 +2,8 @@
   "config": {
     "name": "office-365",
     "label": "Office 365",
-    "description": "All the records you need for Office 365 to function."
+    "description": "All the records you need for Office 365 to function.",
+    "category": "productivity"
   },
   "fields": [
     {

@@ -2,7 +2,8 @@
   "config": {
     "name": "simplybuilt",
     "label": "SimplyBuilt",
-    "description": "Build a professional website that looks great on all devices."
+    "description": "Build a professional website that looks great on all devices.",
+    "category": "hosting"
   },
   "fields": [
 

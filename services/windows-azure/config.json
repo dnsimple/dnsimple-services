@@ -2,7 +2,8 @@
   "config": {
     "name": "windows-azure",
     "label": "Windows Azure",
-    "description": "Build, deploy and manage applications across a global network of Microsoft-managed datacenters."
+    "description": "Build, deploy and manage applications across a global network of Microsoft-managed datacenters.",
+    "category": "infrastructure"
   },
   "fields": [
     {

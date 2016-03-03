@@ -2,7 +2,8 @@
   "config": {
     "name": "fastly",
     "label": "Fastly",
-    "description": "Fastly is a CDN (Content Delivery Network)."
+    "description": "Fastly is a CDN (Content Delivery Network).",
+    "category": "infrastructure"
   },
   "records": [
     {
