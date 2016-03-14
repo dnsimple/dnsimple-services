@@ -2,7 +2,8 @@
   "config": {
     "name": "djeese",
     "label": "Djeese",
-    "description": "The easiest way to build websites with django CMS."
+    "description": "The easiest way to build websites with django CMS.",
+    "deprecated": true
   },
   "records": [
     {
