@@ -3,8 +3,9 @@
     "name": "bitbucket",
     "label": "Bitbucket",
     "description": "Access your Bitbucket repositories from git.domain.tld",
-    "default-subdomain": "git"
-  }, 
+    "default-subdomain": "git",
+    "deprecated": true
+  },
   "records": [
     {
       "type": "CNAME",
