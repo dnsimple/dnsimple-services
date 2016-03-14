@@ -2,7 +2,8 @@
   "config": {
     "name": "roon",
     "label": "Roon",
-    "description": "The easiest way to blog."
+    "description": "The easiest way to blog.",
+    "deprecated": true
   },
   "fields": [
     {
