@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the home of the [DNSimple](https://dnsimple.com) service templates. The one-click services in DNSimple are defined as JSON configurations and loaded into our system at deploy time. This means that you can contribute a new template by creating a pull request, simplifying the process of creating and updating templates. 
+Welcome to the home of the [DNSimple](https://dnsimple.com) service templates. The one-click services in DNSimple are defined as JSON configurations and loaded into our system at deploy time. This means that you can contribute a new template by creating a pull request, simplifying the process of creating and updating templates.
 
 # Contributing
 
@@ -57,6 +57,17 @@ You have to choose one and only one category for your service:
 * email
 * ecommerce
 * productivity (google-apps, office-365, marketing, support)
+
+#### Remove services
+
+To remove a specific service from the list of available one-click services, add the `deprecated` attribute to the config section for that service. This prevents users from selecting that service, but keeps the existing configuration if it was applied to a domain before the deprecation. We don't delete any DNS records when a service is deprecated.
+
+```
+config {
+  ...
+  "deprecated": true
+}
+```
 
 ### Fields
 
