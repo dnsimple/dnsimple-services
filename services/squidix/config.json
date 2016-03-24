@@ -1,0 +1,26 @@
+{
+  "config": {
+    "name": "squidix",
+    "label": "Squidix",
+    "description": "Squidix offers reliable hosting plans from shared servers to dedicated servers",
+    "category": "hosting"
+  },
+  "records": [
+    {
+      "type": "A",
+      "content": "148.163.67.8",
+      "ttl": 3600
+    },
+    {
+      "type": "A",
+      "content": "107.191.102.190",
+      "ttl": 3600
+    },
+    {
+      "type": "A",
+      "content": "168.235.80.31",
+      "ttl": 3600
+    }
+  ]
+}
+
