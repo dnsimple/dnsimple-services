@@ -10,7 +10,7 @@ task default: [:verify]
 desc "Generate a new service"
 task :generate, :name do |t, args|
   name = args[:name]
-  label = args[:label] 
+  label = args[:label]
 
   begin
     DnsimpleServices.generate(name, label)

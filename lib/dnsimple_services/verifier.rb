@@ -16,22 +16,22 @@ module DnsimpleServices
     end
 
     def verify
-      problems << "The service directory for #{name} does not exist" unless File.exists?(outdir)
-      problems << "A service must have a logo.png file that is 228 x 78 pixels" unless valid_logo? 
-      if File.exists?(config_path)
+      problems << "The service directory for #{name} does not exist" unless File.exist?(outdir)
+      problems << "A service must have a logo.png file that is 228 x 78 pixels" unless valid_logo?
+      if File.exist?(config_path)
         verify_config
       else
         problems << "A service must have a valid config.json file"
       end
 
-      recommendations << "A service should have a readme.md file" unless File.exists?("#{outdir}/readme.md")
+      recommendations << "A service should have a readme.md file" unless File.exist?("#{outdir}/readme.md")
 
       [problems, recommendations]
     end
 
     private
     def valid_logo?
-      File.exists?(logo_path) && Dimensions.dimensions(logo_path) == LOGO_DIMENSIONS 
+      File.exist?(logo_path) && Dimensions.dimensions(logo_path) == LOGO_DIMENSIONS
     end
 
     def verify_config

@@ -17,7 +17,7 @@ module DnsimpleServices
     raise GeneratorError, "Name is required" unless name
 
     outdir = "services/#{name}"
-    raise GeneratorError, "Service already exists" if File.exists?(outdir)
+    raise GeneratorError, "Service already exists" if File.exist?(outdir)
 
     label ||= DEFAULT_LABEL
 
@@ -26,12 +26,12 @@ module DnsimpleServices
     config_path = "#{outdir}/config.json"
     config = File.read config_path
     open(config_path, 'w') do |f|
-      vars = {name: name, label: label}
+      vars = { name: name, label: label }
       f.write(config % vars)
     end
   end
 
-  def self.verify(name, logger=Logger::Stdout.new)
+  def self.verify(name, logger = Logger::Stdout.new)
     raise VerifierError, "Name is required" unless name
 
     problems, recommendations = Verifier.new(name).verify
@@ -59,5 +59,5 @@ module DnsimpleServices
     logger << ""
   end
 
-  
+
 end
