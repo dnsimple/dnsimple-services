@@ -1,10 +1,18 @@
 {
   "config": {
     "name": "fastmail",
-    "label": "Fast, reliable email",
-    "description": "Fast, reliable email for businesses, families and professionals.",
+    "label": "FastMail",
+    "description": "Email, calendars and contacts done right.",
     "category": "email"
   },
+  "fields": [
+    {
+      "name": "dkim",
+      "label": "DKIM Key",
+      "description": "Enter the contents of the DKIM record as provided on Fastmail's Domain Settings page for this domain.",
+      "example": "v=DKIM1; k=rsa; p=..."
+    }
+  ],
   "records": [
     {
       "type": "MX",
@@ -19,16 +27,115 @@
       "prio": 20
     },
     {
+      "name": "*",
+      "type": "MX",
+      "content": "in1-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "name": "*",
+      "type": "MX",
+      "content": "in2-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 20
+    },
+    {
       "name": "mail",
-      "type": "CNAME",
-      "content": "www.fastmail.fm",
+      "type": "MX",
+      "content": "in1-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "name": "mail",
+      "type": "MX",
+      "content": "in2-smtp.messagingengine.com",
+      "ttl": 3600,
+      "prio": 20
+    },
+    {
+      "name": "mail",
+      "type": "ALIAS",
+      "content": "mail.fastmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "mesmtp._domainkey",
+      "type": "TXT",
+      "content": "{{dkim}}",
+      "ttl": 3600
+    },
+    {
+      "name": "_adsp._domainkey",
+      "type": "TXT",
+      "content": "dkim=unknown",
       "ttl": 3600
     },
     {
       "type": "SPF",
       "content": "v=spf1 include:spf.messagingengine.com ~all",
       "ttl": 3600
+    },
+    {
+      "name": "_client._smtp",
+      "type": "SRV",
+      "content": "1 1 1 {{domain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "_submission._tcp",
+      "type": "SRV",
+      "content": "0 1 587 smtp.fastmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "_imap._tcp",
+      "type": "SRV",
+      "content": "0 0 0 .",
+      "ttl": 3600
+    },
+    {
+      "name": "_imaps._tcp",
+      "type": "SRV",
+      "content": "0 1 993 imap.fastmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "_pop3._tcp",
+      "type": "SRV",
+      "content": "0 0 0 .",
+      "ttl": 3600
+    },
+    {
+      "name": "_pop3s._tcp",
+      "type": "SRV",
+      "content": "10 1 995 pop.fastmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "_carddav._tcp",
+      "type": "SRV",
+      "content": "0 0 0 .",
+      "ttl": 3600
+    },
+    {
+      "name": "_carddavs._tcp",
+      "type": "SRV",
+      "content": "0 1 443 carddav.fastmail.com",
+      "ttl": 3600
+    },
+    {
+      "name": "_caldav._tcp",
+      "type": "SRV",
+      "content": "0 0 0 .",
+      "ttl": 3600
+    },
+    {
+      "name": "_caldavs._tcp",
+      "type": "SRV",
+      "content": "0 1 443 caldav.fastmail.com",
+      "ttl": 3600
     }
   ]
 }
-
