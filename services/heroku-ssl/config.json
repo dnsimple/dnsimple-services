@@ -9,7 +9,7 @@
     {
       "name": "appdomain",
       "label": "Heroku Domain",
-      "description": "Your Heroku domain, for example: in example.com.herokudns.com the SSL endpoint name is example.com",
+      "description": "Your Heroku domain, for example: in example.com.herokudns.com the Heroku Domain is example.com",
       "append": ".herokudns.com",
       "example": "example.com"
     }
