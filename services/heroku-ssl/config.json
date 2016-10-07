@@ -7,26 +7,24 @@
   },
   "fields": [
     {
-      "name": "app",
-      "label": "Heroku SSL Endpoint Name",
-      "description": "Your SSL endpoint name is part of your Heroku SSL URL, for example: in funky-chicken-2211.herokussl.com the SSL endpoint name is funky-chicken-2211",
-      "append": ".herokussl.com",
-      "example": "funky-chicken-2211"
+      "name": "appdomain",
+      "label": "Heroku Domain",
+      "description": "Your Heroku domain, for example: in example.com.herokudns.com the SSL endpoint name is example.com",
+      "append": ".herokudns.com",
+      "example": "example.com"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{app}}.herokussl.com",
+      "content": "{{appdomain}}.herokudns.com",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{app}}.herokussl.com",
+      "content": "{{appdomain}}.herokudns.com",
       "ttl": 3600
     }
   ]
 }
-
-
