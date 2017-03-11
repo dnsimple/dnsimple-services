@@ -37,13 +37,25 @@
       "prio": 5
     },
     {
-      "content": "alt3.aspmx.l.google.com",
+      "content": "aspmx2.googlemail.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
-      "content": "alt4.aspmx.l.google.com",
+      "content": "aspmx3.googlemail.com",
+      "type": "MX",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "content": "aspmx4.googlemail.com",
+      "type": "MX",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "content": "aspmx5.googlemail.com",
       "type": "MX",
       "ttl": 3600,
       "prio": 10
