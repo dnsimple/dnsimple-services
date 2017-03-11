@@ -8,8 +8,8 @@
   "records": [
     {
       "name": "@",
-      "type": "A",
-      "content": "45.55.110.124",
+      "type": "ALIAS",
+      "content": "na-west1.surge.sh",
       "ttl": 3600
     },
     {
