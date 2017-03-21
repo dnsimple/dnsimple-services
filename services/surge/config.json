@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "surge",
+    "label": "Surge",
+    "description": "Static web publishing for Front-End Developers",
+    "category": "hosting"
+  },
+  "records": [
+    {
+      "name": "@",
+      "type": "ALIAS",
+      "content": "na-west1.surge.sh",
+      "ttl": 3600
+    },
+    {
+      "name": "*",
+      "type": "CNAME",
+      "content": "na-west1.surge.sh",
+      "ttl": 3600
+    }
+  ]
+}
