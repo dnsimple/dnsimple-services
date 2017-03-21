@@ -5,14 +5,6 @@
     "description": "Email, calendars and contacts done right.",
     "category": "email"
   },
-  "fields": [
-    {
-      "name": "dkim",
-      "label": "DKIM Key",
-      "description": "Enter the contents of the DKIM record as provided on Fastmail's Domain Settings page for this domain.",
-      "example": "v=DKIM1; k=rsa; p=..."
-    }
-  ],
   "records": [
     {
       "type": "MX",
@@ -61,15 +53,21 @@
       "ttl": 3600
     },
     {
-      "name": "mesmtp._domainkey",
-      "type": "TXT",
-      "content": "{{dkim}}",
+      "name": "fm1._domainkey",
+      "type": "CNAME",
+      "content": "fm1.{{domain}}.dkim.fmhosted.com",
       "ttl": 3600
     },
     {
-      "name": "_adsp._domainkey",
-      "type": "TXT",
-      "content": "dkim=unknown",
+      "name": "fm2._domainkey",
+      "type": "CNAME",
+      "content": "fm2.{{domain}}.dkim.fmhosted.com",
+      "ttl": 3600
+    },
+    {
+      "name": "fm3._domainkey",
+      "type": "CNAME",
+      "content": "fm3.{{domain}}.dkim.fmhosted.com",
       "ttl": 3600
     },
     {
