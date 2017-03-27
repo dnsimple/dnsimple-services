@@ -86,7 +86,7 @@
     },
     {
       "type": "SPF",
-      "content": "v=spf1 include:spf.messagingengine.com ?all",
+      "content": "v=spf1 include:spf.messagingengine.com ~all",
       "ttl": 3600
     },
     {
