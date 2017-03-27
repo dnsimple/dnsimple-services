@@ -61,10 +61,22 @@
       "ttl": 3600
     },
     {
-      "name": "mesmtp._domainkey",
-      "type": "TXT",
-      "content": "{{dkim}}",
-      "ttl": 3600
+      "name": "fm1._domainkey.{{domain}}",
+      "type": "CNAME",
+      "content": "fm1.{{domain}}.dkim.fmhosted.com",
+      "ttl": 3600 
+    },
+    {
+      "name": "fm2._domainkey.{{domain}}",
+      "type": "CNAME",
+      "content": "fm2.{{domain}}.dkim.fmhosted.com",
+      "ttl": 3600 
+    },
+    {
+      "name": "fm3._domainkey.{{domain}}",
+      "type": "CNAME",
+      "content": "fm3.{{domain}}.dkim.fmhosted.com",
+      "ttl": 3600 
     },
     {
       "name": "_adsp._domainkey",
@@ -74,7 +86,7 @@
     },
     {
       "type": "SPF",
-      "content": "v=spf1 include:spf.messagingengine.com ~all",
+      "content": "v=spf1 include:spf.messagingengine.com ?all",
       "ttl": 3600
     },
     {
