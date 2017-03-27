@@ -1,0 +1,24 @@
+{
+  "config": {
+    "name": "droplr-subdomain",
+    "label": "Droplr Subdomain",
+    "description": "Serve your Droplr shortlinks and files from a subdomain."
+  },
+  "fields": [
+    {
+      "name": "subdomain",
+      "label": "Subdomain",
+      "description": "The subdomain part of the full domain you set in your Droplr account, i.e. `files`.domain.tld.",
+      "example": "files"
+    }
+  ],
+  "records": [
+    {
+      "name": "{{subdomain}}",
+      "type": "A",
+      "content": "50.112.122.158",
+      "ttl": 3600
+    }
+  ]
+}
+
