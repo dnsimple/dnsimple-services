@@ -3,7 +3,8 @@
     "name": "heroku-ssl",
     "label": "Heroku SSL",
     "description": "Use Heroku as your web host, with SSL support.",
-    "category": "infrastructure"
+    "category": "infrastructure",
+    "deprecated": true
   },
   "fields": [
     {

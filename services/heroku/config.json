@@ -17,13 +17,13 @@
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{app}}.herokudns.com",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{app}}.herokudns.com",
       "ttl": 3600
     }
   ]
