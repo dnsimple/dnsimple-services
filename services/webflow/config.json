@@ -1,0 +1,30 @@
+{
+  "config": {
+    "name": "webflow",
+    "label": "Webflow",
+    "description": "Webflow is a responsive web design tool, CMS, and hosting platform.",
+    "category": "hosting"
+  },
+  "fields": [
+
+  ],
+  "records": [ 
+    {
+      "type": "A",
+      "content": "23.235.33.229",
+      "ttl": 300
+    },
+    {
+      "type": "A",
+      "content": "104.156.81.229",
+      "ttl": 300
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "proxy.webflow.com",
+      "ttl": 300
+    }
+  ]
+}
+
