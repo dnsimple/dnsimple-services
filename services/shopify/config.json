@@ -8,13 +8,13 @@
   "records": [ 
     {
       "type": "ALIAS",
-      "content": "shops.shopify.com",
+      "content": "shops.myshopify.com",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "shops.shopify.com",
+      "content": "shops.myshopify.com",
       "ttl": 3600
     }
   ]
