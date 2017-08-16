@@ -7,8 +7,8 @@
   },
   "records": [ 
     {
-      "type": "ALIAS",
-      "content": "shops.myshopify.com",
+      "type": "A",
+      "content": "23.227.38.32",
       "ttl": 3600
     },
     {
