@@ -90,23 +90,9 @@
       "prio": 0
     },
     {
-      "name": "_imap._tcp",
-      "type": "SRV",
-      "content": "0 0 .",
-      "ttl": 3600,
-      "prio": 0
-    },
-    {
       "name": "_imaps._tcp",
       "type": "SRV",
       "content": "1 993 imap.fastmail.com",
-      "ttl": 3600,
-      "prio": 0
-    },
-    {
-      "name": "_pop3._tcp",
-      "type": "SRV",
-      "content": "0 0 .",
       "ttl": 3600,
       "prio": 0
     },
@@ -118,23 +104,9 @@
       "prio": 10
     },
     {
-      "name": "_carddav._tcp",
-      "type": "SRV",
-      "content": "0 0 .",
-      "ttl": 3600,
-      "prio": 0
-    },
-    {
       "name": "_carddavs._tcp",
       "type": "SRV",
       "content": "1 443 carddav.fastmail.com",
-      "ttl": 3600,
-      "prio": 0
-    },
-    {
-      "name": "_caldav._tcp",
-      "type": "SRV",
-      "content": "0 0 .",
       "ttl": 3600,
       "prio": 0
     },
