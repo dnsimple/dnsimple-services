@@ -1,0 +1,25 @@
+{
+  "config": {
+    "name": "blackbell",
+    "label": "Blackbell",
+    "description": "The simplest way to sell services.",
+    "category": "ecommerce",
+    "subdomain-required": true
+  },
+  "fields": [
+    {
+      "name": "cname",
+      "label": "Select subdomain",
+      "description": "",
+      "example": "www"
+    }
+  ],
+  "records": [
+    {
+      "name": "{{cname}}",
+      "type": "CNAME",
+      "content": "cname.blackbellapp.com",
+      "ttl": 600
+    }
+  ]
+}
