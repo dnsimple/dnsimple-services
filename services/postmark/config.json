@@ -1,0 +1,63 @@
+{
+  "config": {
+    "name": "postmark",
+    "label": "Postmark",
+    "description": "Postmark is a transactional email service to enable your app to reliably send and receive email.",
+    "category": "email",
+    "subdomain-required": false
+  },
+  "fields": [
+    {
+      "name": "dkim_hostname",
+      "label": "DKIM Hostname",
+      "description": "The value from the DKIM 'Hostname' column in your DNS Settings for this domain.",
+      "example": "20180101160548pm._domainkey"
+    },
+    {
+      "name": "dkim_value",
+      "label": "DKIM Value",
+      "description": "The value from the DKIM 'Add this value' column in your DNS Settings for this domain.",
+      "example": "k=rsa;p=MIGgMA0GCSqSGIb3DQeBAQUAA4GNADCBiQKBgbCEJ8na8ejciQNjjV0rIOoYrSCMl+EWMkHgWMYQDy3AzQBKsmORtBYD/YosuyacHg0o0NSjzCBfVZqQ5koCuzK8dGg4t3/KoRy9GwIDAQADL8eF4C4pP/dJQF2R5vHELTfAF7q6aEOr9Y8FhPZG4XjUvv42ZR9ewnEvMF5M3vz/W1c/S5dB"
+    },
+    {
+      "name": "inbound_subdomain",
+      "label": "Inbound Subdomain",
+      "description": "Your desired subdomain to use for inbound email addresses. You may also use a 'wildcard' inbound domain by specifying '*' as your inbound subdomain.",
+      "example": "inbound"
+    },
+    {
+      "name": "dmarc_value",
+      "label": "DMARC Value",
+      "description": "The TXT record value provided to you in the DMARC setup process.",
+      "example": "v=DMARC1; p=none; pct=100; rua=mailto:re+asdfasdf5zi@dmarc.postmarkapp.com; sp=none; aspf=r;"
+    }
+  ],
+  "records": [ 
+    {
+      "name": "{{dkim_hostname}}",
+      "type": "TXT",
+      "content": "{{dkim_value}}",
+      "ttl": 3600
+    },
+    {
+      "name": "pm-bounces",
+      "type": "CNAME",
+      "content": "pm.mtasv.net",
+      "ttl": 3600
+    },
+    {
+      "name": "{{inbound_subdomain}}",
+      "type": "MX",
+      "content": "inbound.postmarkapp.com",
+      "ttl": 3600,
+      "prio": 10
+    },
+    {
+      "name": "_dmarc",
+      "type": "TXT",
+      "content": "{{dmarc_value}}",
+      "ttl": 3600
+    }
+  ]
+}
+
