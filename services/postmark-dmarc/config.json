@@ -16,12 +16,6 @@
   ],
   "records": [ 
     {
-      "name": "pm-bounces",
-      "type": "CNAME",
-      "content": "pm.mtasv.net",
-      "ttl": 3600
-    },
-    {
       "name": "_dmarc",
       "type": "TXT",
       "content": "{{dmarc_value}}",
