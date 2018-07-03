@@ -1,0 +1,32 @@
+{
+  "config": {
+    "name": "postmark-dmark",
+    "label": "DMARC Reports by Postmark",
+    "description": "The DMARC tool processes reports from major ISPs about your domain's DMARC alignment and turn them into beautiful, human-readable weekly email digests, absolutely free.",
+    "category": "email",
+    "subdomain-required": false
+  },
+  "fields": [
+    {
+      "name": "dmarc_value",
+      "label": "DMARC Value",
+      "description": "The TXT record value provided to you in the DMARC setup process.",
+      "example": "v=DMARC1; p=none; pct=100; rua=mailto:re+asdfasdf5zi@dmarc.postmarkapp.com; sp=none; aspf=r;"
+    }
+  ],
+  "records": [ 
+    {
+      "name": "pm-bounces",
+      "type": "CNAME",
+      "content": "pm.mtasv.net",
+      "ttl": 3600
+    },
+    {
+      "name": "_dmarc",
+      "type": "TXT",
+      "content": "{{dmarc_value}}",
+      "ttl": 3600
+    }
+  ]
+}
+
