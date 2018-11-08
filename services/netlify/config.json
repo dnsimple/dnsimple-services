@@ -2,7 +2,7 @@
   "config": {
     "name": "netlify",
     "label": "Netlify",
-    "description": "The premium hosting service for modern static websites",
+    "description": "The premium hosting service for modern static websites.",
     "category": "hosting"
   },
   "fields": [
