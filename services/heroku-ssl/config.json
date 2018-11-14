@@ -8,10 +8,10 @@
   "fields": [
     {
       "name": "appdomain",
-      "label": "Heroku Domain",
-      "description": "Your Heroku domain, for example: in example.com.herokudns.com the Heroku Domain is example.com",
+      "label": "Heroku DNS Name",
+      "description": "Your Heroku DNS name, for example: in babbling-gibbon-94258.herokudns.com the Heroku DNS name is babbling-gibbon-94258",
       "append": ".herokudns.com",
-      "example": "example.com"
+      "example": "babbling-gibbon-94258"
     }
   ],
   "records": [
