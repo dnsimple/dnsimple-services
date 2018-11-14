@@ -8,22 +8,22 @@
   "fields": [
     {
       "name": "app",
-      "label": "Heroku App Name",
-      "description": "Your app name is part of your Heroku URL, for example: in yourapp.herokuapp.com the app name is yourapp",
-      "append": ".herokuapp.com",
+      "label": "Heroku DNS Name",
+      "description": "Your DNS name is part of your Heroku URL, for example: in yourapp.herokudns.com the DNS name is yourapp",
+      "append": ".herokudns.com",
       "example": "yoursite"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{app}}.herokudnsc.com",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{app}}.herokudns.com",
       "ttl": 3600
     }
   ]
