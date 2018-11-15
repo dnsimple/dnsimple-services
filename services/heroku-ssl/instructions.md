@@ -1,1 +1,1 @@
-Enter your Heroku domain name to continue. You must have a Hobby plan or higher to use this service and you must install your SSL certificate on Heroku first. You must also add your custom domain to your Heroku app settings.
+Enter your Heroku DNS name to continue. You must have a Hobby plan or higher to use this service and you must install your SSL certificate on Heroku first. You must also add your custom domain to your Heroku app settings.
