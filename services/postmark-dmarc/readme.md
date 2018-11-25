@@ -1,0 +1,1 @@
+[DMARC Reports by Postmark](https://dmarc.postmarkapp.com) will process reports from major ISPs about your domain's DMARC alignment and turn them into beautiful, human-readable weekly email digests, absolutely free.

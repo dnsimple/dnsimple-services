@@ -24,12 +24,6 @@
       "label": "Inbound Subdomain",
       "description": "Your desired subdomain to use for inbound email addresses. You may also use a 'wildcard' inbound domain by specifying '*' as your inbound subdomain.",
       "example": "inbound"
-    },
-    {
-      "name": "dmarc_value",
-      "label": "DMARC Value",
-      "description": "The TXT record value provided to you in the DMARC setup process.",
-      "example": "v=DMARC1; p=none; pct=100; rua=mailto:re+asdfasdf5zi@dmarc.postmarkapp.com; sp=none; aspf=r;"
     }
   ],
   "records": [ 
@@ -51,12 +45,6 @@
       "content": "inbound.postmarkapp.com",
       "ttl": 3600,
       "prio": 10
-    },
-    {
-      "name": "_dmarc",
-      "type": "TXT",
-      "content": "{{dmarc_value}}",
-      "ttl": 3600
     }
   ]
 }
