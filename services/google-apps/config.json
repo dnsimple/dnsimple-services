@@ -1,8 +1,8 @@
 {
   "config": {
-    "name": "google-apps",
-    "label": "Google Apps",
-    "description": "All the records you need for Google Apps to function.",
+    "name": "g-suite",
+    "label": "G Suite",
+    "description": "All the records you need for G Suite to function.",
     "category": "productivity"
   },
   "records": [
