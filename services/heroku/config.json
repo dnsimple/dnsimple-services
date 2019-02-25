@@ -7,23 +7,30 @@
   },
   "fields": [
     {
-      "name": "app",
-      "label": "Heroku App Name",
-      "description": "Your app name is part of your Heroku URL, for example: in yourapp.herokuapp.com the app name is yourapp",
+      "name": "apexdomain",
+      "label": "Heroku Apex App Name",
+      "description": "Your Heroku Apex DNS name, for example: in babbling-gibbon-c4v3frod744ibh8z8usw5z31.herokudns.com the Heroku DNS name is babbling-gibbon-c4v3frod744ibh8z8usw5z31",
       "append": ".herokuapp.com",
-      "example": "yoursite"
+      "example": "babbling-gibbon-c4v3frod744ibh8z8usw5z31"
+    },
+    {
+      "name": "wwwdomain",
+      "label": "Heroku WWW App Name",
+      "description": "Your Heroku WWW DNS name, for example: in feline-banana-x39vk8z4nfs20fs79i72ddzz.herokudns.com the Heroku DNS name is feline-banana-x39vk8z4nfs20fs79i72ddzz",
+      "append": ".herokuapp.com",
+      "example": "feline-banana-x39vk8z4nfs20fs79i72ddzz"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{apexdomain}}.herokuapp.com",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{app}}.herokuapp.com",
+      "content": "{{wwwdomain}}.herokuapp.com",
       "ttl": 3600
     }
   ]
