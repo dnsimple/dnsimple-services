@@ -9,28 +9,26 @@
     {
       "name": "apexdomain",
       "label": "Heroku Apex DNS Name",
-      "description": "Your Heroku Apex DNS name, for example: in unstrung-syllabic-cghda7s78raaqrq55696m5g0.herokudns.com the Heroku DNS name is unstrung-syllabic-cghda7s78raaqrq55696m5g0",
-      "append": ".herokudns.com",
-      "example": "unstrung-syllabic-cghda7s78raaqrq55696m5g0"
+      "description": "Your Heroku Apex DNS name.",
+      "example": "apex-meta-foo.herokudns.com"
     },
     {
       "name": "wwwdomain",
       "label": "Heroku WWW DNS Name",
-      "description": "Your Heroku WWW DNS name, for example: in antonym-rivalry-b163r7kvcv32we2uaw69gd8a.herokudns.com the Heroku DNS name is antonym-rivalry-b163r7kvcv32we2uaw69gd8a",
-      "append": ".herokudns.com",
-      "example": "antonym-rivalry-b163r7kvcv32we2uaw69gd8a"
+      "description": "Your Heroku WWW DNS name",
+      "example": "www-meta-foo.herokudns.com"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{apexdomain}}.herokudns.com",
+      "content": "{{apexdomain}}",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{wwwdomain}}.herokudns.com",
+      "content": "{{wwwdomain}}",
       "ttl": 3600
     }
   ]
