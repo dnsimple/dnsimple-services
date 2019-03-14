@@ -3,27 +3,33 @@
     "name": "heroku-ssl",
     "label": "Heroku SSL",
     "description": "Use Heroku as your web host, with SSL support.",
-    "category": "infrastructure"
+    "category": "infrastructure",
+    "deprecated": true
   },
   "fields": [
     {
-      "name": "appdomain",
-      "label": "Heroku DNS Name",
-      "description": "Your Heroku DNS name, for example: in babbling-gibbon-94258.herokudns.com the Heroku DNS name is babbling-gibbon-94258",
-      "append": ".herokudns.com",
-      "example": "babbling-gibbon-94258"
+      "name": "apexdomain",
+      "label": "Heroku Apex DNS Name",
+      "description": "Your Heroku Apex DNS name.",
+      "example": "apex-meta-foo.herokudns.com"
+    },
+    {
+      "name": "wwwdomain",
+      "label": "Heroku WWW DNS Name",
+      "description": "Your Heroku WWW DNS name",
+      "example": "www-meta-foo.herokudns.com"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{appdomain}}.herokudns.com",
+      "content": "{{apexdomain}}",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{appdomain}}.herokudns.com",
+      "content": "{{wwwdomain}}",
       "ttl": 3600
     }
   ]
