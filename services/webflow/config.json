@@ -10,20 +10,15 @@
   ],
   "records": [ 
     {
-      "type": "A",
-      "content": "23.235.33.229",
-      "ttl": 300
-    },
-    {
-      "type": "A",
-      "content": "104.156.81.229",
-      "ttl": 300
+      "type": "ALIAS",
+      "content": "proxy.webflow.com",
+      "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
       "content": "proxy.webflow.com",
-      "ttl": 300
+      "ttl": 3600
     }
   ]
 }
