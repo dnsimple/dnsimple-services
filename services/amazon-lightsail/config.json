@@ -1,0 +1,23 @@
+{
+  "config": {
+    "name": "amazon-lightsail",
+    "label": "AWS Lightsail",
+    "description": "Amazon Lightsail is an easy way for you to quickly deploy and manage applications in the AWS cloud",
+    "category": "infrastructure"
+  },
+  "fields": [
+    {
+      "name": "ip",
+      "label": "Static IP",
+      "description": "Enter your AWS Lightsail instance public static IP",
+      "example": "1.1.1.1"
+    }
+  ],
+  "records": [
+    {
+      "type": "A",
+      "content": "{{ip}}",
+      "ttl": 3600
+    }
+  ]
+}
