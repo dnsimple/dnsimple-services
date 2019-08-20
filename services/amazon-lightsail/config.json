@@ -2,7 +2,7 @@
   "config": {
     "name": "amazon-lightsail",
     "label": "AWS Lightsail",
-    "description": "Amazon Lightsail is an easy way for you to quickly deploy and manage applications in the AWS cloud",
+    "description": "Amazon Lightsail is an easy way for you to quickly deploy and manage applications in the AWS cloud.",
     "category": "infrastructure"
   },
   "fields": [
