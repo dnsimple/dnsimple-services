@@ -1,5 +1,6 @@
 {
   "config": {
+    "deprecated": true,
     "name": "squarespace6",
     "label": "Squarespace 6",
     "description": "Managed environment for creating and maintaining a beautiful website, blog, or portfolio. (Version 6)",

@@ -1,0 +1,36 @@
+{
+  "config": {
+    "name": "squarespace",
+    "label": "Squarespace",
+    "description": "Managed environment for creating and maintaining a beautiful website, blog, or portfolio.",
+    "category": "ecommerce"
+  },
+  "fields": [
+    {
+      "name": "verification",
+      "label": "Verification Code",
+      "description": "Enter your unique verification code under the column Host in Squarespace",
+      "example": "123abc456def"
+    }
+  ],
+  "records": [
+    {
+      "type": "ALIAS",
+      "content": "ext-cust.squarespace.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "content": "ext-cust.squarespace.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "{{verification}}",
+      "content": "verify.squarespace.com",
+      "ttl": 3600
+    }
+  ]
+}
+
