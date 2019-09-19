@@ -1,0 +1,38 @@
+{
+  "config": {
+    "name": "platformsh",
+    "label": "Platform.sh",
+    "description": "",
+    "category": "hosting",
+    "subdomain-required": true
+  },
+  "fields": [
+      {
+        "name": "domain",
+        "label": "Your Apex domain name",
+        "description": "",
+        "example": "example.com"
+      },
+      {
+        "name": "platformshdomain",
+        "label": "Platform.sh master domain",
+        "description": "Domain name used by the Platform.sh master environment",
+        "example": "master-7rqtwti-abc123.us.platformsh.site"
+      }
+  ],
+  "records": [
+    {
+        "name": "{{domain}}",
+        "type": "ALIAS",
+        "content": "{{platformshdomain}}",
+        "ttl": 3600
+    },
+    {
+        "name": "www.{{domain}}",
+        "type": "CNAME",
+        "content": "{{platformshdomain}}",
+        "ttl": 3600
+    }
+  ]
+}
+
