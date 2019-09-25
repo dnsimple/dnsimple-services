@@ -8,12 +8,6 @@
   },
   "fields": [
       {
-        "name": "domain",
-        "label": "Your Apex domain name",
-        "description": "",
-        "example": "example.com"
-      },
-      {
         "name": "platformshdomain",
         "label": "Platform.sh master domain",
         "description": "Domain name used by the Platform.sh master environment",
@@ -22,13 +16,7 @@
   ],
   "records": [
     {
-        "name": "{{domain}}",
-        "type": "ALIAS",
-        "content": "{{platformshdomain}}",
-        "ttl": 3600
-    },
-    {
-        "name": "www.{{domain}}",
+        "name": "www",
         "type": "CNAME",
         "content": "{{platformshdomain}}",
         "ttl": 3600
