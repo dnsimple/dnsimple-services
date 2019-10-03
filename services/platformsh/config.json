@@ -1,0 +1,26 @@
+{
+  "config": {
+    "name": "platformsh",
+    "label": "Platform.sh",
+    "description": "",
+    "category": "hosting",
+    "subdomain-required": true
+  },
+  "fields": [
+      {
+        "name": "platformshdomain",
+        "label": "Platform.sh master domain",
+        "description": "Domain name used by the Platform.sh master environment",
+        "example": "master-7rqtwti-abc123.us.platformsh.site"
+      }
+  ],
+  "records": [
+    {
+        "name": "www",
+        "type": "CNAME",
+        "content": "{{platformshdomain}}",
+        "ttl": 3600
+    }
+  ]
+}
+
