@@ -2,10 +2,11 @@
   "config": {
     "name": "paperplane",
     "label": "Paperplane.io",
+    "deprecated": true,
     "description": "Radically simple static hosting.",
     "category": "hosting"
   },
-  "records": [ 
+  "records": [
     {
       "type": "ALIAS",
       "content": "proxy.paperplane.io",
