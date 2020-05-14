@@ -3,15 +3,13 @@
     "name": "format",
     "label": "format",
     "description": "The online portfolio photographers choose to showcase their work and grow their business.",
-    "default-subdomain": "www",
     "category": "hosting"
   },
   "fields": [
     {
       "name": "site",
       "label": "Format Address",
-      "description": "This is your Format Address field",
-      "description": "This is your Format Address field",
+      "description": "The Format Address field configured at Format.com",
       "append": ".format.com",
       "example": "my-site"
     }
@@ -21,6 +19,12 @@
       "type": "CNAME",
       "name": "www",
       "content": "{{site}}.format.com",
+      "ttl": 3600
+    },
+    {
+      "type": "URL",
+      "name": "",
+      "content": "http://www.{{domain}}",
       "ttl": 3600
     }
   ]
