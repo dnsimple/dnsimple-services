@@ -2,14 +2,25 @@
   "config": {
     "name": "format",
     "label": "format",
-    "description": "format is an online portfolio platform for professionally showcasing your work.",
+    "description": "The online portfolio photographers choose to showcase their work and grow their business.",
     "default-subdomain": "www",
     "category": "hosting"
   },
+  "fields": [
+    {
+      "name": "site",
+      "label": "Format Address",
+      "description": "This is your Format Address field",
+      "description": "This is your Format Address field",
+      "append": ".format.com",
+      "example": "my-site"
+    }
+  ],
   "records": [
     {
       "type": "CNAME",
-      "content": "format.com",
+      "name": "www",
+      "content": "{{site}}.format.com",
       "ttl": 3600
     }
   ]
