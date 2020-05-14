@@ -9,18 +9,18 @@
     {
       "name": "first_record",
       "label": "A Record",
-      "description": "Use the value for the first A record from your Webflow hosting tab.",
+      "description": "Use the value for the first A record from your Webflow hosting tab."
     },
     {
       "name": "second_record",
       "label": "A Record",
-      "description": "Use the value for the second A record from your Webflow hosting tab.",
+      "description": "Use the value for the second A record from your Webflow hosting tab."
     },
     {
       "name": "cname_record",
       "label": "CNAME Record",
-      "description": "Use the value for the CNAME record from your Webflow hosting tab.",
-    },
+      "description": "Use the value for the CNAME record from your Webflow hosting tab."
+    }
   ],
   "records": [
     {
