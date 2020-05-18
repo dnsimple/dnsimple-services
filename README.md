@@ -19,7 +19,7 @@ To generate a new service definition:
 
 `rake generate[$name]` where $name is the short name of your service (for example: wordpress)
 
-For example: `rake verify[my-service]`
+For example: `rake generate[my-service]`
 
 To verify that a service definition meets our requirements for deployment:
 
