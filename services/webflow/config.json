@@ -6,18 +6,39 @@
     "category": "hosting"
   },
   "fields": [
-
-  ],
-  "records": [ 
     {
-      "type": "ALIAS",
-      "content": "proxy.webflow.com",
+      "name": "first_record",
+      "label": "A Record",
+      "description": "Use the value for the first A record from your Webflow hosting tab."
+    },
+    {
+      "name": "second_record",
+      "label": "A Record",
+      "description": "Use the value for the second A record from your Webflow hosting tab."
+    },
+    {
+      "name": "cname_record",
+      "label": "CNAME Record",
+      "description": "Use the value for the CNAME record from your Webflow hosting tab."
+    }
+  ],
+  "records": [
+    {
+      "type": "A",
+      "name": "",
+      "content": "{{first_record}}",
+      "ttl": 3600
+    },
+    {
+      "type": "A",
+      "name": "",
+      "content": "{{second_record}}",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "proxy.webflow.com",
+      "content": "{{cname_record}}",
       "ttl": 3600
     }
   ]
