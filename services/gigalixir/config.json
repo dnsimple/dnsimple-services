@@ -1,0 +1,23 @@
+{
+  "config": {
+    "name": "gigalixir",
+    "label": "Gigalixir",
+    "description": "Use Gigalixir as your web host.",
+    "category": "infrastructure"
+  },
+  "fields": [
+  ],
+  "records": [ 
+    {
+      "type": "ALIAS",
+      "content": "{{domain}}.gigalixirdns.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "content": "{{subdomain}}.{{domain}}.gigalixirdns.com",
+      "ttl": 3600
+    }
+  ]
+}
+
