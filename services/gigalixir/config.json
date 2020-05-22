@@ -6,16 +6,17 @@
     "category": "infrastructure"
   },
   "fields": [
+    {
+      "name": "fqdn",
+      "label": "Fully Qualified Domain Name",
+      "description": "Your fully qualified domain name.",
+      "example": "www.example.com"
+    }
   ],
   "records": [ 
     {
       "type": "ALIAS",
-      "content": "{{domain}}.gigalixirdns.com",
-      "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "content": "{{subdomain}}.{{domain}}.gigalixirdns.com",
+      "content": "{{fqdn}}.gigalixirdns.com",
       "ttl": 3600
     }
   ]
