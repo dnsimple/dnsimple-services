@@ -7,16 +7,28 @@
   },
   "fields": [
     {
-      "name": "fqdn",
-      "label": "Fully Qualified Domain Name",
-      "description": "Your fully qualified domain name.",
-      "example": "www.example.com"
+      "name": "apexdomain",
+      "label": "Gigalixir Apex App Name",
+      "description": "Your Gigalixir Apex DNS name.",
+      "example": "example.com.gigalixirdns.com"
+    },
+    {
+      "name": "wwwdomain",
+      "label": "Gigalixir WWW App Name",
+      "description": "Your Gigalixir WWW DNS name.",
+      "example": "www.example.com.gigalixirdns.com"
     }
   ],
   "records": [ 
     {
       "type": "ALIAS",
-      "content": "{{fqdn}}.gigalixirdns.com",
+      "content": "{{apexdomain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{wwwdomain}}",
       "ttl": 3600
     }
   ]
