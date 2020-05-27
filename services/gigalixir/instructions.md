@@ -1,4 +1,6 @@
-You must also add your custom domain to your gigalixir app with 
-`gigalixir domains:add www.{{domain}}`
-`gigalixir domains:add {{domain}}`
+You must also add your custom domain to your Gigalixir app with
 
+```
+gigalixir domains:add www.example.com
+gigalixir domains:add example.com
+```
