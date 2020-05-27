@@ -1,0 +1,36 @@
+{
+  "config": {
+    "name": "gigalixir",
+    "label": "Gigalixir",
+    "description": "Use Gigalixir as your web host.",
+    "category": "infrastructure"
+  },
+  "fields": [
+    {
+      "name": "apexdomain",
+      "label": "Gigalixir Apex App Name",
+      "description": "Your Gigalixir Apex DNS name.",
+      "example": "example.com.gigalixirdns.com"
+    },
+    {
+      "name": "wwwdomain",
+      "label": "Gigalixir WWW App Name",
+      "description": "Your Gigalixir WWW DNS name.",
+      "example": "www.example.com.gigalixirdns.com"
+    }
+  ],
+  "records": [ 
+    {
+      "type": "ALIAS",
+      "content": "{{apexdomain}}",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "content": "{{wwwdomain}}",
+      "ttl": 3600
+    }
+  ]
+}
+
