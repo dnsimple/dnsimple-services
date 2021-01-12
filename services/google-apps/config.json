@@ -1,6 +1,6 @@
 {
   "config": {
-    "name": "google-workspace",
+    "name": "google-apps",
     "label": "Google Workspace",
     "description": "All the records you need for Google Workspace to function.",
     "category": "productivity"
