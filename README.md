@@ -56,7 +56,7 @@ You have to choose one and only one category for your service:
 * infrastructure (CDN, link shorteners)
 * email
 * ecommerce
-* productivity (google-apps, office-365, marketing, support)
+* productivity (google-workspace, office-365, marketing, support)
 
 #### Remove services
 
