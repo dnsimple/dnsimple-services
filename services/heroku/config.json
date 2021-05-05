@@ -8,14 +8,14 @@
   "fields": [
     {
       "name": "apexdomain",
-      "label": "Heroku Apex App Name",
-      "description": "Your Heroku Apex DNS name.",
+      "label": "Apex DNS Target",
+      "description": "The DNS Target supplied by Heroku for the apex/naked domain.",
       "example": "apex-meta-foo.herokudns.com"
     },
     {
       "name": "wwwdomain",
-      "label": "Heroku WWW App Name",
-      "description": "Your Heroku WWW DNS name.",
+      "label": "WWW DNS Target",
+      "description": "The DNS Target supplied by Heroku for the WWW subdomain.",
       "example": "www-meta-foo.herokudns.com"
     }
   ],
