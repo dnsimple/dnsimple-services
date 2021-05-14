@@ -9,21 +9,21 @@
     {
       "name": "site",
       "label": "Netlify Site Name",
-      "description": "Your site name is part of your Netlify URL, for example: in yoursite.netlify.com the app name is yoursite",
-      "append": ".netlify.com",
+      "description": "Your site name is part of your Netlify URL, for example: in yoursite.netlify.app the app name is yoursite",
+      "append": ".netlify.app",
       "example": "yoursite"
     }
   ],
   "records": [
     {
       "type": "ALIAS",
-      "content": "{{site}}.netlify.com",
+      "content": "{{site}}.netlify.app",
       "ttl": 3600
     },
     {
       "name": "www",
       "type": "CNAME",
-      "content": "{{site}}.netlify.com",
+      "content": "{{site}}.netlify.app",
       "ttl": 3600
     }
   ]
