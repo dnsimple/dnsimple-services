@@ -1,0 +1,17 @@
+{
+  "config": {
+    "name": "404",
+    "label": "404 Not Found Page",
+    "description": "Will display a 404 not found page with random images or videos along with your domain name",
+    "category": "infrastructure",
+    "default-subdomain": "404",
+    "subdomain-required": true
+  },
+  "records": [ 
+    {
+      "type": "CNAME",
+      "content": "404.al",
+      "ttl": 3600
+    }
+  ]
+}
