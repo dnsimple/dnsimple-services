@@ -1,0 +1,1 @@
+[404.al](https://404.al) will display a 404 not found page with random images or videos along with your domain name.

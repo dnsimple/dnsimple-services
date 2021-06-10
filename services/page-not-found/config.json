@@ -1,6 +1,5 @@
 {
   "config": {
-    "deprecated": true,
     "name": "404",
     "label": "404 Not Found Page",
     "description": "Will display a 404 not found page with random images or videos along with your domain name",
@@ -8,7 +7,7 @@
     "default-subdomain": "404",
     "subdomain-required": true
   },
-  "records": [
+  "records": [ 
     {
       "type": "CNAME",
       "content": "404.al",
