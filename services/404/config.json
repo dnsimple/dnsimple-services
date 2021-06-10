@@ -8,7 +8,7 @@
     "default-subdomain": "404",
     "subdomain-required": true
   },
-  "records": [ 
+  "records": [
     {
       "type": "CNAME",
       "content": "404.al",
