@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "ClickFunnels",
+    "label": "ClickFunnels",
+    "description": "A website and funnel builder that helps businesses sell their products and services online",
+    "category": "ecommerce"
+  },
+  "records": [
+    {
+      "name": "www",
+      "type": "ALIAS",
+      "content": "target.clickfunnels.com",
+      "ttl": 3600
+    },
+    {
+      "name": "www",
+      "type": "URL",
+      "content": "http://{{domain}}",
+      "ttl": 3600
+    }
+  ]
+}
