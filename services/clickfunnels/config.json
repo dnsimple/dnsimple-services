@@ -7,7 +7,7 @@
   },
   "records": [
     {
-      "name": "www",
+      "name": "",
       "type": "ALIAS",
       "content": "target.clickfunnels.com",
       "ttl": 3600
