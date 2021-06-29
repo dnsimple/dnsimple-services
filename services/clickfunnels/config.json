@@ -15,7 +15,7 @@
     {
       "name": "www",
       "type": "URL",
-      "content": "http://{{domain}}",
+      "content": "https://{{domain}}",
       "ttl": 3600
     }
   ]
