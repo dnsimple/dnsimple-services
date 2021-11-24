@@ -1,5 +1,6 @@
 {
   "config": {
+    "deprecated": true,
     "name": "cloudflare",
     "label": "CloudFlare",
     "description": "Protect and accelerate your web site.",
