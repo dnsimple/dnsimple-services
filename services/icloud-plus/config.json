@@ -2,16 +2,15 @@
   "config": {
     "name": "icloud-plus",
     "label": "iCloud Plus",
-    "description": "Set up a domain with iCloud Mail",
-    "category": ""
+    "description": "Set up a custom domain with iCloud Mail",
+    "category": "email"
   },
 
   "fields": [
     {
       "name": "icloud_plus_txt",
       "label": "iCloud+ TXT record",
-      "description": "",
-      "append": "",
+      "description": "Enter the personal TXT record provided during set up",
       "example": ""
     }
   ],
