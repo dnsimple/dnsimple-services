@@ -43,8 +43,8 @@ module DnsimpleServices
       else
         problems << "A service config.json must define a JSON object"
       end
-    rescue Yajl::ParseError => e
-      problems << "JSON #{e}"
+    rescue Yajl::ParseError => exception
+      problems << "JSON #{exception}"
     end
 
     def verify_config_data(config_data)

@@ -7,13 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: PreferredName.
-Naming/RescuedExceptionsVariableName:
-  Exclude:
-    - 'lib/dnsimple_services/verifier.rb'
-
-# Offense count: 1
 # Configuration parameters: MinSize.
 Performance/CollectionLiteralInLoop:
   Exclude:
