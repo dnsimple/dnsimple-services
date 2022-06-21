@@ -59,7 +59,7 @@ module DnsimpleServices
 
     def verify_config_name(config_name)
       if config_name
-        problems << "The service name may only include the lowercase characters a-z, 0-9 and the dash character" unless config_name =~ /^[a-z0-9-]+$/
+        problems << "The service name may only include the lowercase characters a-z, 0-9 and the dash character" unless /^[a-z0-9-]+$/.match?(config_name)
         recommendations << "The service config name should be the same as the service directory name" if config_name != name
       else
         problems << "The service config must have a name attribute"

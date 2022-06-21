@@ -13,12 +13,6 @@ Performance/CollectionLiteralInLoop:
     - 'lib/dnsimple_services/verifier.rb'
 
 # Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Performance/RegexpMatch:
-  Exclude:
-    - 'lib/dnsimple_services/verifier.rb'
-
-# Offense count: 1
 Security/Open:
   Exclude:
     - 'lib/dnsimple_services.rb'
