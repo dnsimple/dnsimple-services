@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DnsimpleServices
   class Verifier
     attr_reader :name, :problems, :recommendations, :outdir, :config_path, :logo_path

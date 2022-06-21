@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'dnsimple_services/verifier'
 require_relative 'dnsimple_services/logger/stdout'
 
