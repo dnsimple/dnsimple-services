@@ -5,7 +5,7 @@ module DnsimpleServices
       def write(message)
         puts message
       end
-      alias :<< :write
+      alias << write
     end
   end
 end
