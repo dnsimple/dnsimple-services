@@ -1,0 +1,15 @@
+---
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop_dnsimple.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 2.7
+  Exclude:
+    - '*.gemspec'
+    - 'Rakefile'
+    - 'vendor/**/*'
