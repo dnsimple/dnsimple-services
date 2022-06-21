@@ -30,6 +30,7 @@ module DnsimpleServices
     end
 
     private
+
     def valid_logo?
       File.exist?(logo_path) && Dimensions.dimensions(logo_path) == LOGO_DIMENSIONS
     end
