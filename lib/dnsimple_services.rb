@@ -7,7 +7,7 @@ module DnsimpleServices
   DEFAULT_LABEL = "Printable name for the service"
   DEFAULT_DESCRIPTION = "This is a short description of the service"
 
-  LOGO_DIMENSIONS = [228, 78]
+  LOGO_DIMENSIONS = [228, 78].freeze
 
   class GeneratorError < RuntimeError
   end
