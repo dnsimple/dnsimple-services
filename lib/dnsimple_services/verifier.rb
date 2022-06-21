@@ -1,9 +1,6 @@
 module DnsimpleServices
   class Verifier
-    attr_reader :name
-    attr_reader :problems, :recommendations
-
-    attr_reader :outdir, :config_path, :logo_path
+    attr_reader :name, :problems, :recommendations, :outdir, :config_path, :logo_path
 
     def initialize(name)
       @name = name
