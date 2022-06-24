@@ -41,7 +41,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   rugged
-  yajl-ruby (~> 1.4.1)
+  yajl-ruby (~> 1.4.3)
 
 BUNDLED WITH
    2.3.16
