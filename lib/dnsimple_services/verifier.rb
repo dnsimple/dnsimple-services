@@ -85,8 +85,9 @@ module DnsimpleServices
       if records
         problems << "A service records section must be a list of services with at least one service" unless records.is_a?(Array) && records.length >= 1
 
+        record_types = %w(type ttl content)
         records.each_with_index do |record, index|
-          %w(type ttl content).each do |attr|
+          record_types.each do |attr|
             problems << "Record #{index + 1} is missing the #{attr} attribute" unless record[attr]
           end
         end

@@ -7,12 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Configuration parameters: MinSize.
-Performance/CollectionLiteralInLoop:
-  Exclude:
-    - 'lib/dnsimple_services/verifier.rb'
-
-# Offense count: 1
 Security/Open:
   Exclude:
     - 'lib/dnsimple_services.rb'
