@@ -1,9 +1,8 @@
+# frozen_string_literal: true
+
 module DnsimpleServices
   class Verifier
-    attr_reader :name
-    attr_reader :problems, :recommendations
-
-    attr_reader :outdir, :config_path, :logo_path
+    attr_reader :name, :problems, :recommendations, :outdir, :config_path, :logo_path
 
     def initialize(name)
       @name = name
@@ -30,6 +29,7 @@ module DnsimpleServices
     end
 
     private
+
     def valid_logo?
       File.exist?(logo_path) && Dimensions.dimensions(logo_path) == LOGO_DIMENSIONS
     end
@@ -42,8 +42,8 @@ module DnsimpleServices
       else
         problems << "A service config.json must define a JSON object"
       end
-    rescue Yajl::ParseError => e
-      problems << "JSON #{e}"
+    rescue Yajl::ParseError => exception
+      problems << "JSON #{exception}"
     end
 
     def verify_config_data(config_data)
@@ -58,7 +58,7 @@ module DnsimpleServices
 
     def verify_config_name(config_name)
       if config_name
-        problems << "The service name may only include the lowercase characters a-z, 0-9 and the dash character" unless config_name =~ /^[a-z0-9-]+$/
+        problems << "The service name may only include the lowercase characters a-z, 0-9 and the dash character" unless /^[a-z0-9-]+$/.match?(config_name)
         recommendations << "The service config name should be the same as the service directory name" if config_name != name
       else
         problems << "The service config must have a name attribute"

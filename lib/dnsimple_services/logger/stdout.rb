@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DnsimpleServices
   module Logger
     # A logger that writes the output messages to STDOUT.
@@ -5,7 +7,7 @@ module DnsimpleServices
       def write(message)
         puts message
       end
-      alias :<< :write
+      alias << write
     end
   end
 end
