@@ -28,7 +28,7 @@ module DnsimpleServices
     config_path = "#{outdir}/config.json"
     config = File.read config_path
     open(config_path, 'w') do |f|
-      vars = { name: name, label: label }
+      vars = { name:, label: }
       f.write(config % vars)
     end
   end
