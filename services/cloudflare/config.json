@@ -37,8 +37,5 @@
       "content": "{{target_address_or_host}}",
       "ttl": 3600
     }
-  ],
-  "hook": {
-    "url": "https://dnsimple-cloudflare-hook.herokuapp.com/"
-  }
+  ]
 }
