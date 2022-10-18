@@ -1,0 +1,49 @@
+{
+  "config": {
+    "name": "icloud-plus",
+    "label": "iCloud Plus",
+    "description": "Set up a custom domain with iCloud Mail",
+    "category": "email"
+  },
+
+  "fields": [
+    {
+      "name": "icloud_plus_txt",
+      "label": "iCloud+ TXT record",
+      "description": "Enter the personal TXT record provided during set up",
+      "example": ""
+    }
+  ],
+
+  "records": [
+    {
+      "type": "TXT",
+      "content": "{{icloud_plus_txt}}",
+      "ttl": 3600
+    },
+    {
+      "type": "MX",
+      "content": "mx01.mail.icloud.com",
+      "prio": 10,
+      "ttl": 3600
+    },
+    {
+      "type": "MX",
+      "content": "mx02.mail.icloud.com",
+      "prio": 10,
+      "ttl": 3600
+    },
+    {
+      "type": "TXT",
+      "name": "sig1._domainkey",
+      "content": "sig1.dkim.{{domain}}.at.icloudmailadmin.com",
+      "prio": 10,
+      "ttl": 3600
+    },
+    {
+      "type": "SPF",
+      "content": "v=spf1 include:icloud.com ~all",
+      "ttl": 3600
+    }
+  ]
+}
