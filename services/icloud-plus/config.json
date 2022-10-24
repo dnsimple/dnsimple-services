@@ -34,7 +34,7 @@
       "ttl": 3600
     },
     {
-      "type": "TXT",
+      "type": "CNAME",
       "name": "sig1._domainkey",
       "content": "sig1.dkim.{{domain}}.at.icloudmailadmin.com",
       "prio": 10,
