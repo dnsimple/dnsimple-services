@@ -75,14 +75,14 @@
     },
     {
       "name": "_sip._tls",
-      "content": "1 443 sipdir.online.lync.com",
+      "content": "1 443 sipdir.online.lync.com.",
       "type": "SRV",
       "prio": 100,
       "ttl": 3600
     },
     {
       "name": "_sipfederationtls._tcp",
-      "content": "1 5061 sipfed.online.lync.com",
+      "content": "1 5061 sipfed.online.lync.com.",
       "type": "SRV",
       "prio": 100,
       "ttl": 3600
