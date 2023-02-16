@@ -78,42 +78,42 @@
     {
       "name": "_client._smtp",
       "type": "SRV",
-      "content": "1 1 {{domain}}",
+      "content": "1 1 {{domain}}.",
       "ttl": 3600,
       "prio": 1
     },
     {
       "name": "_submission._tcp",
       "type": "SRV",
-      "content": "1 587 smtp.fastmail.com",
+      "content": "1 587 smtp.fastmail.com.",
       "ttl": 3600,
       "prio": 0
     },
     {
       "name": "_imaps._tcp",
       "type": "SRV",
-      "content": "1 993 imap.fastmail.com",
+      "content": "1 993 imap.fastmail.com.",
       "ttl": 3600,
       "prio": 0
     },
     {
       "name": "_pop3s._tcp",
       "type": "SRV",
-      "content": "1 995 pop.fastmail.com",
+      "content": "1 995 pop.fastmail.com.",
       "ttl": 3600,
       "prio": 10
     },
     {
       "name": "_carddavs._tcp",
       "type": "SRV",
-      "content": "1 443 carddav.fastmail.com",
+      "content": "1 443 carddav.fastmail.com.",
       "ttl": 3600,
       "prio": 0
     },
     {
       "name": "_caldavs._tcp",
       "type": "SRV",
-      "content": "1 443 caldav.fastmail.com",
+      "content": "1 443 caldav.fastmail.com.",
       "ttl": 3600,
       "prio": 0
     }
