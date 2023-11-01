@@ -14,10 +14,10 @@
       "example": "v=DMARC1; p=none; pct=100; rua=mailto:re+asdfasdf5zi@dmarc.postmarkapp.com; sp=none; aspf=r;"
     }
   ],
-  "records": [ 
+  "records": [
     {
-      "name": "_dmarc",
       "type": "TXT",
+      "name": "_dmarc",
       "content": "{{dmarc_value}}",
       "ttl": 3600
     }

@@ -7,50 +7,50 @@
   },
   "records": [
     {
+      "type": "CNAME",
       "name": "mail",
       "content": "ghs.googlehosted.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "calendar",
       "content": "ghs.googlehosted.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
-      "content": "aspmx.l.google.com",
       "type": "MX",
+      "content": "aspmx.l.google.com",
       "ttl": 3600,
       "prio": 1
     },
     {
+      "type": "MX",
       "content": "alt1.aspmx.l.google.com",
-      "type": "MX",
       "ttl": 3600,
       "prio": 5
     },
     {
+      "type": "MX",
       "content": "alt2.aspmx.l.google.com",
-      "type": "MX",
       "ttl": 3600,
       "prio": 5
     },
     {
+      "type": "MX",
       "content": "alt3.aspmx.l.google.com",
-      "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
+      "type": "MX",
       "content": "alt4.aspmx.l.google.com",
-      "type": "MX",
       "ttl": 3600,
       "prio": 10
     },
     {
+      "type": "TXT",
       "content": "v=spf1 a include:_spf.google.com ~all",
-      "type": "SPF",
       "ttl": 3600
     }
   ]

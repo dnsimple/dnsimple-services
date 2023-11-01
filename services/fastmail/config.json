@@ -70,8 +70,8 @@
       "content": "fm3.{{domain}}.dkim.fmhosted.com",
       "ttl": 3600
     },
-      {
-      "type": "SPF",
+    {
+      "type": "TXT",
       "content": "v=spf1 include:spf.messagingengine.com ~all",
       "ttl": 3600
     },

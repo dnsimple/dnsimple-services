@@ -22,68 +22,68 @@
   ],
   "records": [
     {
-      "content": "{{verification}}",
       "type": "TXT",
+      "content": "{{verification}}",
       "ttl": 3600
     },
-     {
-      "content": "{{mx}}.mail.protection.outlook.com",
+    {
       "type": "MX",
+      "content": "{{mx}}.mail.protection.outlook.com",
       "prio": 0,
       "ttl": 3600
     },
-     {
+    {
+      "type": "CNAME",
       "name": "autodiscover",
       "content": "autodiscover.outlook.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "lyncdiscover",
       "content": "webdir.online.lync.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "msoid",
       "content": "clientconfig.microsoftonline-p.net",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "sip",
       "content": "sipdir.online.lync.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "enterpriseregistration",
       "content": "enterpriseregistration.windows.net",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "CNAME",
       "name": "enterpriseenrollment",
       "content": "enterpriseenrollment.manage.microsoft.com",
-      "type": "CNAME",
       "ttl": 3600
     },
     {
+      "type": "TXT",
       "content": "v=spf1 include:spf.protection.outlook.com -all",
-      "type": "SPF",
       "ttl": 3600
     },
     {
+      "type": "SRV",
       "name": "_sip._tls",
       "content": "1 443 sipdir.online.lync.com.",
-      "type": "SRV",
       "prio": 100,
       "ttl": 3600
     },
     {
+      "type": "SRV",
       "name": "_sipfederationtls._tcp",
       "content": "1 5061 sipfed.online.lync.com.",
-      "type": "SRV",
       "prio": 100,
       "ttl": 3600
     }

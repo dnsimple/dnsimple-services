@@ -7,7 +7,7 @@
   },
   "records": [
     {
-      "type": "SPF",
+      "type": "TXT",
       "content": "v=spf1 include:mailgun.org ~all",
       "ttl": 3600
     },
