@@ -9,4 +9,3 @@ updates:
     labels:
       - task
       - dependencies
-      - backlog-dependencies
