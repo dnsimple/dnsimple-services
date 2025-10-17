@@ -1,9 +1,12 @@
----
-# Defaults https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+# This is the DNSimple organization-wide RuboCop configuration.
+# It defines our unified linting and coding standards for all Ruby projects,
+# in accordance with our Ruby development practices and guidelines.
 #
-# References:
-#  * https://github.com/bbatsov/ruby-style-guide
-#  * https://rubocop.readthedocs.io/
+# This template is maintained centrally in the infra-github repository:
+# https://github.com/dnsimple/infra-github/blob/main/workspace/templates/ruby/rubocop_dnsimple.yml
+#
+# For details on RuboCop itself and its configuration options, refer to:
+# https://docs.rubocop.org/rubocop/
 
 AllCops:
   Exclude:
@@ -11,22 +14,8 @@ AllCops:
     - '*.gemspec'
   NewCops: enable
 
-# In most cases, Gems are sorted alphabetically.
-# However, in some few cases the order is relevant due to dependencies.
-Bundler/OrderedGems:
-  Enabled: false
-
-# This cop requires odd code indentations (as of rubocop 0.57.0)
-# https://github.com/rubocop-hq/rubocop/issues/5956
-Layout/AccessModifierIndentation:
-  Enabled: false
-
-# It causes weird aligments, especially for specs.
-Layout/BlockEndNewline:
-  Enabled: false
-
-# Generally, the keyword style uses a lot of space. This is particularly true
-# when you use case/if statements, in combination with a long-name variable.
+# Generally, the keyword style uses a lot of space. This is particularly true when
+# you use case/if statements, in combination with a long-name variable.
 #
 #   invoice_error_message = case error
 #                           when 1 == 1
@@ -38,24 +27,16 @@ Layout/BlockEndNewline:
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
-# [codesmell]
 Layout/LineLength:
   Enabled: false
-  Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'test/**/*_test.rb'
   Max: 100
 
 # [codesmell]
 Lint/SuppressedException:
   Enabled: false
 
-# [codesmell]
 Metrics/AbcSize:
   Enabled: false
-  Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'test/**/*_test.rb'
 
 # [codesmell]
 Metrics/BlockLength:
@@ -68,20 +49,11 @@ Metrics/CyclomaticComplexity:
     - 'spec/**/*_spec.rb'
     - 'test/**/*_test.rb'
 
-# [codesmell]
 Metrics/ClassLength:
   Enabled: false
-  Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'test/**/*_test.rb'
 
-# [codesmell]
 Metrics/MethodLength:
   Enabled: false
-  Exclude:
-    - 'spec/**/*_spec.rb'
-    - 'test/**/*_test.rb'
-  Max: 10
 
 # [codesmell]
 Metrics/ModuleLength:
@@ -108,10 +80,10 @@ Naming/MemoizedInstanceVariableName:
 # to use simple ? methods.
 # Moreover, it's actually more efficient to not-use predicates:
 # https://github.com/bbatsov/rubocop/issues/3633
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: false
 
-# The team agreed decided to use exception
+# The team agreed decided to use exception.
 Naming/RescuedExceptionsVariableName:
   PreferredName: 'exception'
 
@@ -123,10 +95,9 @@ Naming/RescuedExceptionsVariableName:
 Naming/MethodParameterName:
   Enabled: false
 
-# This cop returns false positive violations (as of rubocop 0.57.0)
-# https://github.com/rubocop-hq/rubocop/issues/5953
-Style/AccessModifierDeclarations:
-  Enabled: false
+Style/AccessorGrouping:
+  Enabled: true
+  EnforcedStyle: separated
 
 # Do not use "and" or "or" in conditionals, but for readability we can use it
 # to chain executions. Just beware of operator order.
@@ -137,7 +108,7 @@ Style/AndOr:
 Style/BarePercentLiterals:
   EnforcedStyle: percent_q
 
-# braces_for_chaining seems a good fit of what we've been doing so far.
+# Pick one option for consistency.
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
   AllowedMethods:
@@ -147,11 +118,9 @@ Style/BlockDelimiters:
 Style/EmptyElse:
   EnforcedStyle: empty
 
-# There is no specific preference for empty methods.
-# One-line methods are not exceptionally nice in Ruby.
-# Just ignore this cop for now.
+# Pick one option for consistency.
 Style/EmptyMethod:
-  Enabled: false
+  EnforcedStyle: expanded
 
 # We don't care about the format style.
 # In most cases we use %, but not at the point we want to enforce it
@@ -159,35 +128,20 @@ Style/EmptyMethod:
 Style/FormatString:
   Enabled: false
 
-# Annotated tokens (like %<foo>s) are a good thing,
-# but in most cases we don't need them.
-# %s is a simpler and straightforward version that works in almost all cases.
-# So don't complain.
+# Annotated tokens (like %<foo>s) are a good thing, but in most cases we don't need them.
+# %s is a simpler and straightforward version that works in almost all cases. So don't complain.
 Style/FormatStringToken:
   Enabled: false
 
-# Prefer the latest Hash syntax
+# always - forces use of the 3.1 syntax (e.g. foo:)
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashSyntax
 Style/HashSyntax:
+  EnforcedShorthandSyntax: always
   Exclude:
     # Rakefiles generally have definitions like
     #   :default => :test
     # that looks nicer with the old rocket syntax.
     - 'Rakefile'
-
-# Enforces usage of Hash#each_key and Hash#each_value (vs. Hash#keys.each
-# and Hash#values.each).
-Style/HashEachMethods:
-  Enabled: true
-
-# Enforce the use of Hash#TransformKeys introduced in Ruby 2.5 to transform
-# Hash keys.
-Style/HashTransformKeys:
-  Enabled: true
-
-# Enforce the use of Hash#TransformValues introduced in Ruby 2.5 to transform
-# Hash values.
-Style/HashTransformValues:
-  Enabled: true
 
 # We want to be able to decide when to use one-line if/unless modifiers.
 Style/IfUnlessModifier:
@@ -212,18 +166,13 @@ Style/MultilineBlockChain:
 Style/NegatedIf:
   Enabled: false
 
-# Magic numbers are not welcomed
+# Magic numbers are not welcomed.
 Style/NumericLiterals:
   Exclude:
     # however tests can use numeric literals for method calls,
     # without the need to define a variable just for that.
     - 'spec/**/*_spec.rb'
     - 'test/**/*_test.rb'
-
-# For years, %w() has been the de-facto standard.
-# A lot of libraries are using (). Switching to [] would be a nightmare.
-Style/PercentLiteralDelimiters:
-  Enabled: false
 
 # Enable but only for multiple returns value.
 #
@@ -236,17 +185,7 @@ Style/PercentLiteralDelimiters:
 Style/RedundantReturn:
   AllowMultipleReturnValues: true
 
-# Do we care?
-Style/RegexpLiteral:
-  Enabled: false
-
-# There are cases were the inline rescue is ok. We can either downgrade
-# the severity, or rely on the developer judgement on a case-by-case basis.
-Style/RescueModifier:
-  Enabled: false
-
-# This is quite annoying, especially in cases where we don't control it
-# (e.g. schema.rb).
+# This is quite annoying, especially in cases where we don't control it (e.g. schema.rb).
 Style/SymbolArray:
   Enabled: false
 
@@ -255,23 +194,18 @@ Style/SpecialGlobalVars:
   Enabled: false
   EnforcedStyle: use_perl_names
 
-# We generally use double quotes, sometimes single quotes.
-# Should we enforce it at code level?
 Style/StringLiterals:
-  Enabled: false
   EnforcedStyle: double_quotes
 
-# As before.
 Style/StringLiteralsInInterpolation:
-  Enabled: false
   EnforcedStyle: double_quotes
 
-# It's nice to be consistent. The trailing comma also allows easy reordering,
+# Be consistent. The trailing comma also allows easy reordering,
 # and doesn't cause a diff in Git when you add a line to the bottom.
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 
-# It's nice to be consistent. The trailing comma also allows easy reordering,
+# Be consistent. The trailing comma also allows easy reordering,
 # and doesn't cause a diff in Git when you add a line to the bottom.
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
@@ -290,20 +224,8 @@ Style/WordArray:
   EnforcedStyle: percent
   MinSize: 3
 
-# Forces the order of comparison arguments.
-#
-# According to this cop, the following statement is bad:
-#
-#   "https" == uri.scheme
-#
-# Whereas the following is considered good:
-#
-#   uri.scheme == "https"
-Style/YodaCondition:
-  Enabled: false
-
-# For the same reason of EndAlignment, aligning with the case may have
-# a bad impact on a case after a very long variable.
+# For the same reason of EndAlignment, aligning with the case may have a bad impact
+# on a case after a very long variable.
 #
 #   invoice_error_message = case error
 #                           when 1 == 1
@@ -315,45 +237,22 @@ Style/YodaCondition:
 Layout/CaseIndentation:
   EnforcedStyle: end
 
-# I was a big fan of leading, but trailing seems to be more commonly adopted.
-# At least at the time being.
-Layout/DotPosition:
-  EnforcedStyle: leading
-
-# Double empty lines are useful to separate conceptually different methods
-# in the same class or module.
+# This is quite buggy, as it doesn't recognize double lines.
 Layout/EmptyLines:
   Enabled: false
 
-# This is buggy. It detects as a style violation a few `class`
-# and `module` definitions
-Layout/EmptyLinesAroundArguments:
-  Enabled: false
+Layout/EmptyLineBetweenDefs:
+  NumberOfEmptyLines: [1, 2]
 
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
     # RSpec is all made of blocks. Disable this config in RSpec
-    # to be consistent with EmptyLinesAroundClassBody
-    # and EmptyLinesAroundModuleBody
+    # to be consistent with EmptyLinesAroundClassBody and EmptyLinesAroundModuleBody
     - 'spec/**/*_spec.rb'
     - 'test/**/*_test.rb'
 
-# In most cases, a space is nice. Sometimes, it's not.
-# Just be consistent with the rest of the surrounding code.
-Layout/EmptyLinesAroundClassBody:
-  Enabled: false
-
 # We're ok with it. We use it quite often for method-level rescue statements.
 Layout/EmptyLinesAroundExceptionHandlingKeywords:
-  Enabled: false
-
-# In most cases, a space is nice. Sometimes, it's not.
-# Just be consistent with the rest of the surrounding code.
-Layout/EmptyLinesAroundModuleBody:
-  Enabled: false
-
-# This is quite buggy, as it doesn't recognize double lines.
-Layout/EmptyLineBetweenDefs:
   Enabled: false
 
 # Multi-line differs from standard indentation, they are indented twice.
