@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'dnsimple_services/verifier'
-require_relative 'dnsimple_services/logger/stdout'
+require_relative "dnsimple_services/verifier"
+require_relative "dnsimple_services/logger/stdout"
 
 module DnsimpleServices
   DEFAULT_LABEL = "Printable name for the service"
@@ -27,7 +27,7 @@ module DnsimpleServices
     FileUtils.cp Dir["example/*"], outdir
     config_path = "#{outdir}/config.json"
     config = File.read config_path
-    open(config_path, 'w') do |f|
+    open(config_path, "w") do |f|
       vars = { name:, label: }
       f.write(config % vars)
     end
@@ -60,6 +60,4 @@ module DnsimpleServices
 
     logger << ""
   end
-
-
 end

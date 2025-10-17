@@ -2,7 +2,12 @@
 
 module DnsimpleServices
   class Verifier
-    attr_reader :name, :problems, :recommendations, :outdir, :config_path, :logo_path
+    attr_reader :name
+    attr_reader :problems
+    attr_reader :recommendations
+    attr_reader :outdir
+    attr_reader :config_path
+    attr_reader :logo_path
 
     def initialize(name)
       @name = name
@@ -37,8 +42,8 @@ module DnsimpleServices
     def verify_config
       config = Yajl::Parser.parse(File.read(config_path))
       if config
-        verify_config_data(config['config'])
-        verify_records(config['records'])
+        verify_config_data(config["config"])
+        verify_records(config["records"])
       else
         problems << "A service config.json must define a JSON object"
       end
@@ -48,9 +53,9 @@ module DnsimpleServices
 
     def verify_config_data(config_data)
       if config_data
-        verify_config_name(config_data['name'])
-        verify_config_label(config_data['label'])
-        verify_config_description(config_data['description'])
+        verify_config_name(config_data["name"])
+        verify_config_label(config_data["label"])
+        verify_config_description(config_data["description"])
       else
         problems << "A service config.json must have a 'config' section"
       end
@@ -85,7 +90,7 @@ module DnsimpleServices
       if records
         problems << "A service records section must be a list of services with at least one service" unless records.is_a?(Array) && records.length >= 1
 
-        record_types = %w(type ttl content)
+        record_types = %w[type ttl content]
         records.each_with_index do |record, index|
           record_types.each do |attr|
             problems << "Record #{index + 1} is missing the #{attr} attribute" unless record[attr]

@@ -2,11 +2,11 @@
 
 source "http://rubygems.org"
 
+gem "dimensions"
 gem "rake"
 gem "rugged"
 gem "yajl-ruby", "~> 1.4.3"
-gem "dimensions"
 
 gem "rubocop"
-gem "rubocop-rake"
 gem "rubocop-performance"
+gem "rubocop-rake"
