@@ -1,0 +1,18 @@
+{
+  "config": {
+    "name": "dmarcdkim",
+    "label": "DMARC Dashboard by DmarcDkim.com",
+    "description": "User-friendly DMARC analytics. Free access to raw reports. Easily enforce a strict policy. Paid tier available for high volume and premium support.",
+    "category": "email",
+    "subdomain-required": false
+  },
+  "fields": [],
+  "records": [
+    {
+      "type": "TXT",
+      "name": "_dmarc",
+      "content": "v=DMARC1; p=none; rua=mailto:{{domain}}@rua.dmarcdkim.io; ruf=mailto:{{domain}}@ruf.dmarcdkim.io; adkim=s; aspf=r; ri=3600; fo=1:d:s",
+      "ttl": 3600
+    }
+  ]
+}

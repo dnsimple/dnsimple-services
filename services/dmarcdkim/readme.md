@@ -1,0 +1,1 @@
+DmarcDkim.com processes DMARC reports and monitors your DNS settings to ensure protection against email spoofing. After activation, use your corporate email to access the DMARC Dashboard at [https://app.dmarcdkim.com/](https://app.dmarcdkim.com/)
