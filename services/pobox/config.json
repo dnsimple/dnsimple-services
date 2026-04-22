@@ -2,7 +2,8 @@
   "config": {
     "name": "pobox",
     "label": "Pobox",
-    "description": "MX records to use your own domain with Pobox.com",
+    "description": "Legacy Pobox MX records kept for existing configurations.",
+    "deprecated": true,
     "category": "email"
   },
   "records": [

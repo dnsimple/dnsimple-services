@@ -1,1 +1,2 @@
-[Pobox](http://pobox.com) Personal, Professional, Powerful Email. Pobox helps you keep your email address for life.
+[Pobox](https://www.fastmail.com/pobox/) is now part of Fastmail and has been
+discontinued as a separate service.
