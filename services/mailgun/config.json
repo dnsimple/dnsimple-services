@@ -2,13 +2,33 @@
   "config": {
     "name": "mailgun",
     "label": "Mailgun",
-    "description": "Mailgun is a set of powerful APIs that allow you to send, receive, track and store email effortlessly.",
+    "description": "Add the DNS records Mailgun to send and receive email.",
     "category": "email"
   },
+  "fields": [
+    {
+      "name": "dkim_name",
+      "label": "DKIM Hostname",
+      "description": "The DKIM hostname Mailgun shows in the Domain Verification and DNS section.",
+      "example": "smtp._domainkey"
+    },
+    {
+      "name": "dkim_value",
+      "label": "DKIM TXT Value",
+      "description": "The DKIM TXT value Mailgun shows in the Domain Verification and DNS section.",
+      "example": "k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC..."
+    }
+  ],
   "records": [
     {
       "type": "TXT",
       "content": "v=spf1 include:mailgun.org ~all",
+      "ttl": 3600
+    },
+    {
+      "name": "{{dkim_name}}",
+      "type": "TXT",
+      "content": "{{dkim_value}}",
       "ttl": 3600
     },
     {
