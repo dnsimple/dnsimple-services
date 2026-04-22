@@ -1,1 +1,5 @@
-[Office 365](https://products.office.com/en-au/business/office) keeps itself up to date, so you always have the latest features of Word, Excel, PowerPoint, and more.
+[Microsoft 365](https://www.microsoft.com/microsoft-365) includes hosted email and
+productivity services for businesses.
+
+This template adds the baseline DNS records for Microsoft 365 email, not every
+optional Microsoft 365 workload.

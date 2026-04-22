@@ -1,21 +1,21 @@
 {
   "config": {
     "name": "office-365",
-    "label": "Office 365",
-    "description": "All the records you need for Office 365 to function.",
+    "label": "Microsoft 365",
+    "description": "Add the DNS records for Microsoft 365 email.",
     "category": "productivity"
   },
   "fields": [
     {
       "name": "verification",
-      "label": "Verification",
-      "description": "Enter your provided TXT record for verification",
+      "label": "Verification TXT Value",
+      "description": "Enter the exact TXT verification value Microsoft provides for your domain.",
       "example": "MS=msXXXXXXXX"
     },
     {
       "name": "mx",
-      "label": "MX Record",
-      "description": "Enter your provided MX record to route emails",
+      "label": "MX Prefix",
+      "description": "Enter the tenant-specific MX prefix Microsoft provides for your domain.",
       "example": "MSxxxxxxx",
       "append": "mail.protection.outlook.com"
     }
@@ -39,52 +39,8 @@
       "ttl": 3600
     },
     {
-      "type": "CNAME",
-      "name": "lyncdiscover",
-      "content": "webdir.online.lync.com",
-      "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "name": "msoid",
-      "content": "clientconfig.microsoftonline-p.net",
-      "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "name": "sip",
-      "content": "sipdir.online.lync.com",
-      "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "name": "enterpriseregistration",
-      "content": "enterpriseregistration.windows.net",
-      "ttl": 3600
-    },
-    {
-      "type": "CNAME",
-      "name": "enterpriseenrollment",
-      "content": "enterpriseenrollment.manage.microsoft.com",
-      "ttl": 3600
-    },
-    {
       "type": "TXT",
       "content": "v=spf1 include:spf.protection.outlook.com -all",
-      "ttl": 3600
-    },
-    {
-      "type": "SRV",
-      "name": "_sip._tls",
-      "content": "1 443 sipdir.online.lync.com.",
-      "prio": 100,
-      "ttl": 3600
-    },
-    {
-      "type": "SRV",
-      "name": "_sipfederationtls._tcp",
-      "content": "1 5061 sipfed.online.lync.com.",
-      "prio": 100,
       "ttl": 3600
     }
   ]
