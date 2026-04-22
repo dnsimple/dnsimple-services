@@ -5,5 +5,3 @@
 
 If your domain uses CAA records, Blogger requires a CAA entry for
 `letsencrypt.org` so certificates can be issued and renewed.
-
-See the current Blogger documentation for details: https://support.google.com/blogger/answer/1233387?hl=en
