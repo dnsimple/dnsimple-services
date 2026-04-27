@@ -1,3 +1,7 @@
-Platform.sh is the idea-to-cloud application platform.
+Upsun is the application platform formerly known as Platform.sh.
 
-See (Platform.sh)[https://platform.sh] for more information.
+Use this template to connect the `www` subdomain of your domain to the CNAME
+target shown in the Upsun console for your project.
+
+See [Upsun custom domain documentation](https://docs.upsun.com/domains/steps.html)
+for more information.

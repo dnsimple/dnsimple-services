@@ -1,17 +1,17 @@
 {
   "config": {
     "name": "platformsh",
-    "label": "Platform.sh",
-    "description": "",
+    "label": "Upsun",
+    "description": "Connect your domain to your Upsun project.",
     "category": "hosting",
     "subdomain-required": true
   },
   "fields": [
       {
         "name": "platformshdomain",
-        "label": "Platform.sh master domain",
-        "description": "Domain name used by the Platform.sh master environment",
-        "example": "master-7rqtwti-abc123.us.platformsh.site"
+        "label": "Upsun Edge Hostname",
+        "description": "The CNAME target shown in the Domains tab for your Upsun project.",
+        "example": "main-abcd123.abcdefgh1234567.eu.platformsh.site"
       }
   ],
   "records": [
@@ -23,4 +23,3 @@
     }
   ]
 }
-
