@@ -1,6 +1,3 @@
-To use your domain on your Jimdo site complete the following steps:
-
-1. Apply the Jimdo template
-2. Contact [Jimdo support](http://support.jimdo.com/) to add the mail to your domain
-3. [Follow the steps](http://support.jimdo.com/domains/domain-settings/) to make this domain your primary domain
-4. [Follow the steps](http://support.jimdo.com/email/mx-records/) to use the mails too
+1. Add the external domain to your Jimdo site first.
+1. Apply this template to point your domain to jimdo.
+1. This template also adds the MX records Jimdo documents for Jimdo Creator mail on an externally managed domain.
