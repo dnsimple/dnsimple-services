@@ -2,16 +2,41 @@
   "config": {
     "name": "blogger",
     "label": "Blogger",
-    "description": "Use Blogger for your blog.",
-    "default-subdomain": "www",
+    "description": "Connect your domain to your Blogger blog.",
     "category": "blogging"
   },
+  "fields": [
+    {
+      "name": "blog_subdomain",
+      "label": "Blog Subdomain",
+      "description": "The subdomain you want to use for your blog, such as www or blog.",
+      "example": "www"
+    },
+    {
+      "name": "security_name",
+      "label": "Security CNAME Name",
+      "description": "The short host value Blogger shows when you set up a custom domain.",
+      "example": "hqzzzn56a3ri"
+    },
+    {
+      "name": "security_target",
+      "label": "Security CNAME Target",
+      "description": "The destination Blogger shows for the security CNAME.",
+      "example": "gv-oc7x5vzzzqxirt.dv.googlehosted.com"
+    }
+  ],
   "records": [
     {
+      "name": "{{blog_subdomain}}",
       "type": "CNAME",
       "content": "ghs.google.com",
+      "ttl": 3600
+    },
+    {
+      "name": "{{security_name}}",
+      "type": "CNAME",
+      "content": "{{security_target}}",
       "ttl": 3600
     }
   ]
 }
-
