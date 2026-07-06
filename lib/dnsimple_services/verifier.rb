@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module DnsimpleServices
+  # Validates a service definition against DNSimple requirements.
   class Verifier
     attr_reader :name
     attr_reader :problems
