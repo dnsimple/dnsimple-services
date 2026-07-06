@@ -3,6 +3,7 @@
 require_relative "dnsimple_services/verifier"
 require_relative "dnsimple_services/logger/stdout"
 
+# Tools for generating and verifying DNSimple one-click service definitions.
 module DnsimpleServices
   DEFAULT_LABEL = "Printable name for the service"
   DEFAULT_DESCRIPTION = "This is a short description of the service"
@@ -27,7 +28,7 @@ module DnsimpleServices
     FileUtils.cp Dir["example/*"], outdir
     config_path = "#{outdir}/config.json"
     config = File.read config_path
-    open(config_path, "w") do |f|
+    File.open(config_path, "w") do |f|
       vars = { name:, label: }
       f.write(config % vars)
     end

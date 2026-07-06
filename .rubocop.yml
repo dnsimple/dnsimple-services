@@ -1,6 +1,5 @@
 ---
 inherit_from:
-  - .rubocop_todo.yml
   - .rubocop_dnsimple.yml
 
 require:
