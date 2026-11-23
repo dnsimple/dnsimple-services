@@ -7,7 +7,7 @@ plugins:
   - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 3.4.2
+  TargetRubyVersion: 3.4.13
   Exclude:
     - '*.gemspec'
     - 'Rakefile'
